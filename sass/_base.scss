@@ -1,14 +1,39 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 
-
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+@font-face {
+    font-family: Matrix;
+    src: url(./css/fonts/matrix.ttf);
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+.title {
+  font-family: Matrix;
+  color: $neon-green;
+}
+section {
+}
+.stripe {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
 }
 
+.melon {
+  background-color: $melon;
+}
+
+.neon-green {
+  background-color: $neon-green;
+}
+.content {
+  width:67%;
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: Arial;
+}
+// .content {
+//     @extend .small-12; //refer to the mentioned class
+//     @extend .medium-12;
+//     @extend .large-8;
+//     @extend .large-centered;
+//     @extend .columns;
+// }
