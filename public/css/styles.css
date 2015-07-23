@@ -59,27 +59,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @font-face {
   font-family: Matrix;
   src: url(./css/fonts/matrix.ttf); }
-/* line 9, ../../sass/_base.scss */
-.title {
-  font-family: Matrix;
-  color: #62FF0D; }
+/* line 28, ../../sass/_base.scss */
+.large-card.mdl-card {
+  width: 100%;
+  margin: 0 auto; }
 
-/* line 15, ../../sass/_base.scss */
-.stripe {
+/* line 33, ../../sass/_base.scss */
+.pad {
   padding-top: 2.5%;
   padding-bottom: 2.5%; }
 
-/* line 20, ../../sass/_base.scss */
-.melon {
-  background-color: #DFEFE2; }
+/* line 37, ../../sass/_base.scss */
+.toc {
+  border-left: 4px solid #C1EEF4;
+  margin: 24px;
+  padding: 0;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column; }
 
-/* line 24, ../../sass/_base.scss */
-.neon-green {
-  background-color: #62FF0D; }
+/* line 45, ../../sass/_base.scss */
+.toc h4 {
+  font-size: 0.9rem;
+  margin-top: 0; }
 
-/* line 27, ../../sass/_base.scss */
-.content {
-  width: 67%;
-  margin: 0 auto;
-  font-size: 14px;
-  font-family: Arial; }
+/* line 49, ../../sass/_base.scss */
+.toc a {
+  color: #4DD0E1;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 28px;
+  display: block; }
