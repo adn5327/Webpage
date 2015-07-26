@@ -72,7 +72,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .schedule__cell.mdl-data-table__cell--non-numeric {
   padding-top: 0;
   padding-left: 0;
-  padding-right: 1%;
+  padding-right: 0;
   padding-bottom: 0; }
 
 /* line 42, ../../sass/_base.scss */
