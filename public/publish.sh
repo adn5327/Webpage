@@ -36,4 +36,4 @@ echo "Enter your netid"
 read netid
 # rsync over the public directory
 # from Angrave's original publish script
-rsync -ar --no-links --exclude /publish.sh * "$netid"@ssh.courses.engr.illinois.edu:/courses/cs241/sp2015/
+rsync -ar --no-links --exclude /publish.sh * "$netid"@ssh.courses.engr.illinois.edu:/courses/cs241/su2015/
