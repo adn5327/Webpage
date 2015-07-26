@@ -17,6 +17,7 @@ mainControllers.controller('StaffController', ['$scope', function($scope) {
 }]);
 
 mainControllers.controller('ScheduleController', ['$scope', '$http', function($scope, $http) {
+  console.log("hi!");
   $http.get('./data/schedule.json').success(function(data) {
     $scope.schedule = data;
   });
