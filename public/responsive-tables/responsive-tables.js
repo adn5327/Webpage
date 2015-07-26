@@ -1,14 +1,15 @@
 $(document).ready(function() {
   var switched = false;
   var updateTables = function() {
-    if (($(window).width() < 1200) && !switched ){
+    console.log("updating tables");
+    if (($(window).width() < 767) && !switched){
       switched = true;
       $("table.responsive").each(function(i, element) {
         splitTable($(element));
       });
       return true;
     }
-    else if (switched && ($(window).width() > 1200)) {
+    else if (switched && ($(window).width() > 767)) {
       switched = false;
       $("table.responsive").each(function(i, element) {
         unsplitTable($(element));
@@ -17,6 +18,10 @@ $(document).ready(function() {
   };
 
   $(window).load(updateTables);
+  // $(window).bind('hashchange', function() {
+  //   switched = false;
+  //   updateTables();
+  // });
   $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
   $(window).on("resize", updateTables);
 

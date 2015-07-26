@@ -41,8 +41,8 @@
 	  </thead>
 	  <tbody>
 			<tr ng-repeat="week in schedule">
-				<td style="vertical-align: middle;">{{week.week}}</td>
-				<td ng-repeat="day in week.schedule" class="mdl-data-table__cell--non-numeric schedule__cell">
+				<td >{{week.week}}</td>
+				<td ng-repeat="day in week.schedule">
 					<div class="mdl-card mdl-shadow--2dp schedule-card" style = "min-width: 0px;">
 		        <div class="mdl-card__title" style = "background-color: {{day.color}}">
 		          <h2 class="mdl-card__title-text" style = "color: white">{{day.title}}</h2>
