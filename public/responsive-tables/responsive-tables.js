@@ -1,14 +1,14 @@
 $(document).ready(function() {
   var switched = false;
   var updateTables = function() {
-    if (($(window).width() < 1170) && !switched ){
+    if (($(window).width() < 1200) && !switched ){
       switched = true;
       $("table.responsive").each(function(i, element) {
         splitTable($(element));
       });
       return true;
     }
-    else if (switched && ($(window).width() > 1170)) {
+    else if (switched && ($(window).width() > 1200)) {
       switched = false;
       $("table.responsive").each(function(i, element) {
         unsplitTable($(element));

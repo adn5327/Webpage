@@ -1,13 +1,42 @@
 <div class = "row" ng-controller='ScheduleController'>
 	<!-- {{schedule}} -->
-	<table class="mdl-data-table mdl-js-data-table responsive" width = "100%">
+	<!-- <table class="mdl-data-table mdl-js-data-table responsive" width = "100%">
 	  <thead>
 	    <tr>
-				<th >Week</th>
+				<th class="mdl-data-table__cell--non-numeric">Week</th>
 	      <th class="mdl-data-table__cell--non-numeric">Monday</th>
 				<th class="mdl-data-table__cell--non-numeric">Wednesday</th>
 				<th class="mdl-data-table__cell--non-numeric">Thurday Lab</th>
 				<th class="mdl-data-table__cell--non-numeric">Friday</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+			<tr ng-repeat="week in schedule">
+				<td class="mdl-data-table__cell--non-numeric schedule__cell" style="vertical-align: middle;">{{week.week}}</td>
+				<td ng-repeat="day in week.schedule" class="mdl-data-table__cell--non-numeric schedule__cell">
+					<div class="mdl-card mdl-shadow--2dp schedule-card" style = "min-width: 0px;">
+		        <div class="mdl-card__title" style = "background-color: {{day.color}}">
+		          <h2 class="mdl-card__title-text" style = "color: white">{{day.title}}</h2>
+		        </div>
+		        <div class="mdl-card__supporting-text">
+							{{day.summary}}
+		        </div>
+		        <div class="mdl-card__actions mdl-card--border">
+							{{day.resources}}
+		        </div>
+		      </div>
+				</td>
+			</tr>
+	  </tbody>
+	</table> -->
+	<table class = "responsive" width = "100%">
+	  <thead>
+	    <tr>
+				<th >Week</th>
+	      <th>Monday</th>
+				<th>Wednesday</th>
+				<th>Thurday Lab</th>
+				<th>Friday</th>
 	    </tr>
 	  </thead>
 	  <tbody>
