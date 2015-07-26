@@ -1,0 +1,61 @@
+[
+  [
+    {
+      "title" : "Course Introduction",
+      "summary": "We are going to go over the syllabus",
+      "resources": "[notes] [slides-part1] [slides-part2]",
+      "color": "#03a9f4"
+    },
+
+    {
+      "title" : "Introduction to C",
+      "summary": "We are going to go over the syllabus",
+      "resources": "[notes] [slides-part1] [slides-part2]",
+      "color": "#03a9f4"
+    },
+
+    {
+      "title" : "Lab GDB",
+      "summary": "We are going to go over the syllabus",
+      "resources": "[notes] [slides-part1] [slides-part2]",
+      "color": "#ffd600"
+    },
+
+    {
+      "title" : "C No Evil",
+      "summary": "We are going to go over the syllabus",
+      "resources": "[notes] [slides-part1] [slides-part2]",
+      "color": "#03a9f4"
+    }
+  ],
+
+  [
+    {
+      "title" : "Operating Systems",
+      "summary": "We are going to go over the syllabus",
+      "resources": "[notes] [slides-part1] [slides-part2]",
+      "color": "#64dd17"
+    },
+
+    {
+      "title" : "System Calls",
+      "summary": "We are going to go over the syllabus",
+      "resources": "[notes] [slides-part1] [slides-part2]",
+      "color": "#64dd17"
+    },
+
+    {
+      "title" : "Lab GDB",
+      "summary": "We are going to go over the syllabus",
+      "resources": "[notes] [slides-part1] [slides-part2]",
+      "color": "#ffd600"
+    },
+
+    {
+      "title" : "Memory Intro",
+      "summary": "We are going to go over the syllabus",
+      "resources": "[notes] [slides-part1] [slides-part2]",
+      "color": "#009688"
+    }
+  ]
+]

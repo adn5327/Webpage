@@ -65,11 +65,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin: 0 auto; }
 
 /* line 33, ../../sass/_base.scss */
+.schedule-card.mdl-card {
+  width: 100%; }
+
+/* line 36, ../../sass/_base.scss */
+.schedule__cell.mdl-data-table__cell--non-numeric {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 1%;
+  padding-bottom: 0; }
+
+/* line 42, ../../sass/_base.scss */
+.staffPhoto {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%; }
+
+/* line 47, ../../sass/_base.scss */
 .pad {
   padding-top: 2.5%;
   padding-bottom: 2.5%; }
 
-/* line 37, ../../sass/_base.scss */
+/* line 51, ../../sass/_base.scss */
 .toc {
   border-left: 4px solid #C1EEF4;
   margin: 24px;
@@ -78,12 +95,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: flex;
   flex-direction: column; }
 
-/* line 45, ../../sass/_base.scss */
+/* line 59, ../../sass/_base.scss */
 .toc h4 {
   font-size: 0.9rem;
   margin-top: 0; }
 
-/* line 49, ../../sass/_base.scss */
+/* line 63, ../../sass/_base.scss */
 .toc a {
   color: #4DD0E1;
   text-decoration: none;
