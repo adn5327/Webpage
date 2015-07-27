@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
   var switched = false;
   var updateTables = function() {
     console.log("updating tables");
@@ -17,16 +17,16 @@ $(document).ready(function() {
     }
   };
 
-  $(window).load(updateTables);
-  $(window).bind('hashchange', function() {
-    switched = false;
-    updateTables();
-  });
+  // $(window).load(updateTables);
+  // $(window).bind('hashchange', function() {
+  //   switched = false;
+  //   updateTables();
+  // });
   $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
   $(window).on("resize", updateTables);
 
 
-	function splitTable(original)
+	var splitTable = function (original)
 	{
 		original.wrap("<div class='table-wrapper' />");
 
@@ -41,13 +41,13 @@ $(document).ready(function() {
     setCellHeights(original, copy);
 	}
 
-	function unsplitTable(original) {
+	var unsplitTable = function (original) {
     original.closest(".table-wrapper").find(".pinned").remove();
     original.unwrap();
     original.unwrap();
 	}
 
-  function setCellHeights(original, copy) {
+  var setCellHeights = function (original, copy) {
     var tr = original.find('tr'),
         tr_copy = copy.find('tr'),
         heights = [];
@@ -68,5 +68,3 @@ $(document).ready(function() {
       $(this).height(heights[index]);
     });
   }
-
-});

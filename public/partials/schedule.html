@@ -1,4 +1,4 @@
-<div class = "row" ng-controller='ScheduleController'>
+<div ng-controller='ScheduleController'>
 	<!-- {{schedule}} -->
 	<!-- <table class="mdl-data-table mdl-js-data-table responsive" width = "100%">
 	  <thead>
@@ -41,7 +41,7 @@
 	  </thead>
 	  <tbody>
 			<tr ng-repeat="week in schedule">
-				<td >{{week.week}}</td>
+				<th>{{week.week}}</th>
 				<td ng-repeat="day in week.schedule">
 					<div class="mdl-card mdl-shadow--2dp schedule-card" style = "min-width: 0px;">
 		        <div class="mdl-card__title" style = "background-color: {{day.color}}">
