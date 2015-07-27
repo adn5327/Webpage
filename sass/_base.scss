@@ -70,25 +70,26 @@ body {
   display: block;
 }
 
-.responsiveTable {
-    width: 100%;
-    overflow-x:scroll;
-    margin-left:7em;
-    overflow-y:visible;
-    padding-bottom:1px;
-}
-  .responsiveTable td,th {
-    white-space: nowrap;
-  }
-.fixedCol {
-    position:absolute;
-    width:7em;
-    left:0;
-    top:auto;
-    border-right: 0px none black;
-    border-top-width:3px; /*only relevant for first row*/
-    margin-top:-3px; /*compensate for top border*/
-}
+// .responsiveTable {
+//     width: 100%;
+//     overflow-x:scroll;
+//     margin-left:7em;
+//     overflow-y:scroll;
+//     padding-bottom:1px;
+// }
+//   .responsiveTable td,th {
+//     white-space: nowrap;
+//   }
+// .fixedCol {
+//     position:absolute;
+//     width:7em;
+//     left:0;
+//     top:auto;
+//     border-right: 0px none black;
+//     border-top-width:3px; /*only relevant for first row*/
+//     margin-top:-3px; /*compensate for top border*/
+// }
+
 // .headcol:before {content: 'Row ';}
 // .content {
 //     @extend .small-12; //refer to the mentioned class
