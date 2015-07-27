@@ -18,10 +18,10 @@ $(document).ready(function() {
   };
 
   $(window).load(updateTables);
-  // $(window).bind('hashchange', function() {
-  //   switched = false;
-  //   updateTables();
-  // });
+  $(window).bind('hashchange', function() {
+    switched = false;
+    updateTables();
+  });
   $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
   $(window).on("resize", updateTables);
 
