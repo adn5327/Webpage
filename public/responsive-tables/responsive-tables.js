@@ -22,7 +22,7 @@
   //   switched = false;
   //   updateTables();
   // });
-  $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
+  // $(window).on("redraw",function(){switched=false;updateTables();}); // An event to listen for
   $(window).on("resize", updateTables);
 
 

@@ -20,8 +20,9 @@ mainControllers.controller('ScheduleController', ['$scope', '$http', function($s
   console.log("hi!");
   $http.get('./data/schedule.json').success(function(data) {
     $scope.schedule = data;
+    var table = $("#scheduleTable");
+    table.addClass("responsive");
     switched = false;
     updateTables();
-    // location.reload();
   });
 }]);

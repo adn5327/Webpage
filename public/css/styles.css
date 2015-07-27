@@ -111,3 +111,27 @@ body {
   font-size: 16px;
   line-height: 28px;
   display: block; }
+
+/* line 73, ../../sass/_base.scss */
+.responsiveTable {
+  width: 100%;
+  overflow-x: scroll;
+  margin-left: 7em;
+  overflow-y: visible;
+  padding-bottom: 1px; }
+
+/* line 80, ../../sass/_base.scss */
+.responsiveTable td, th {
+  white-space: nowrap; }
+
+/* line 83, ../../sass/_base.scss */
+.fixedCol {
+  position: absolute;
+  width: 7em;
+  left: 0;
+  top: auto;
+  border-right: 0px none black;
+  border-top-width: 3px;
+  /*only relevant for first row*/
+  margin-top: -3px;
+  /*compensate for top border*/ }
