@@ -1,43 +1,31 @@
 <div class = "row" ng-controller='StaffController'>
-
 	<div class="small-12 medium-12 large-8 large-centered columns">
-
-		<div class = "pad">
-			<div id = "description" class="mdl-card mdl-shadow--2dp large-card">
-				<div class="mdl-card__title" style = "background: url('./data/images/testCover.jpg') center / cover; height: 400px;">
-					<h2 class="mdl-card__title-text" style = "color: white">Brandon Chong '17</h2>
+		<div ng-repeat = "member in staff">
+			<div class = "pad">
+				<div id = "description" class="mdl-card mdl-shadow--2dp large-card">
+					<div class="mdl-card__title" style = "background: url('./data/images/staffPhotos/{{member.netid}}.jpg') center / cover; height: 400px;">
+						<h2 class="mdl-card__title-text" style = "color: white">{{member.name}} '{{member.class}}</h2>
+					</div>
+					<div>
+						<table class="mdl-data-table mdl-js-data-table" width = "100%" style = "margin-bottom:0">
+							<tr>
+								<th class="mdl-data-table__cell--non-numeric">Roles in CS 241</th>
+								<td ng-repeat = "role in member.roles" class="mdl-data-table__cell--non-numeric">{{role}}</td>
+							</tr>
+							<tr>
+								<th class="mdl-data-table__cell--non-numeric">Speciality in CS</th>
+								<td class="mdl-data-table__cell--non-numeric">{{member.speciality}}</td>
+							</tr>
+						</table>
+					</div>
+					<div class="mdl-card__menu">
+						<span data-tooltip aria-haspopup="true" class="has-tip" title="{{member.netid}}@illinois.edu">
+							<div class="icon material-icons">
+								<i class="material-icons"><a style ="color:white" href = "mailto:{{member.netid}}@illinois.edu?Subject=CS241%20Student">mail</a></i>
+							</div>
+						</span>
+					</div>
 				</div>
-				<div>
-					<table class="mdl-data-table mdl-js-data-table" width = "100%" style = "margin-bottom:0">
-						<tr>
-							<th class="mdl-data-table__cell--non-numeric">Roles in CS 241</th>
-							<td class="mdl-data-table__cell--non-numeric">Cheat Detection</td>
-						</tr>
-						<tr>
-							<th class="mdl-data-table__cell--non-numeric">Speciality in CS</th>
-							<td class="mdl-data-table__cell--non-numeric">CS Education</td>
-						</tr>
-						<tr>
-							<th class="mdl-data-table__cell--non-numeric">Office Hours</th>
-								<td class="mdl-data-table__cell--non-numeric">Wednesday 11pm</td>
-						</tr>
-						<tr>
-							<th class="mdl-data-table__cell--non-numeric">Lab Sections</th>
-							<td class="mdl-data-table__cell--non-numeric">AYK</td>
-						</tr>
-						<tr>
-							<th class="mdl-data-table__cell--non-numeric">Previous</th>
-							<td class="mdl-data-table__cell--non-numeric">AYK</td>
-						</tr>
-					</table>
-				</div>
-				<div class="mdl-card__menu">
-					<span data-tooltip aria-haspopup="true" class="has-tip" title="bschong2@illinois.edu">
-						<div class="icon material-icons">
-							<i class="material-icons"><a style ="color:white" href = "mailto:bschong2@illinois.edu?Subject=CS241%20Student">mail</a></i>
-						</div>
-					</span>
-			  </div>
 			</div>
 		</div>
 	</div>

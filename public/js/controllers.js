@@ -12,23 +12,15 @@ mainControllers.controller('LabController', ['$scope', function($scope) {
 
 }]);
 
-mainControllers.controller('StaffController', ['$scope', function($scope) {
-
+mainControllers.controller('StaffController', ['$scope', '$http', function($scope, $http) {
+  $http.get('./data/staff.json').success(function(data) {
+    $scope.staff = data;
+  });
 }]);
 
 mainControllers.controller('ScheduleController', ['$scope', '$http', function($scope, $http) {
-  console.log("hi!");
   $http.get('./data/schedule.json').success(function(data) {
     $scope.schedule = data;
     $scope.days = ["Monday", "Wednesday", "Thursday Lab", "Friday"];
-    // $("#scheduleTable").addClass("responsive");
-    // $(window).trigger('redraw');
-    // var table = $(".scrollable > .table-wrapper").outerHTML;
-    // console.log(table);
-    // // $(".table-wrapper").remove();
-    // console.log(table);
-    // $("#scheduleContainer").html(table);
-    // switched = false;
-    // updateTables();
   });
 }]);
