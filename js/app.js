@@ -14,6 +14,10 @@ mainApp.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'partials/lab.html',
     controller: 'LabController'
   }).
+  when('/oh', {
+    templateUrl: 'partials/oh.html',
+    controller: 'OHController'
+  }).
   when('/schedule', {
     templateUrl: 'partials/schedule.html',
     controller: 'ScheduleController'

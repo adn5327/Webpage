@@ -12,6 +12,10 @@ mainControllers.controller('LabController', ['$scope', function($scope) {
 
 }]);
 
+mainControllers.controller('OHController', ['$scope', function($scope) {
+
+}]);
+
 mainControllers.controller('StaffController', ['$scope', '$http', function($scope, $http) {
   $http.get('./data/staff.json').success(function(data) {
     $scope.staff = data;
