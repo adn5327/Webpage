@@ -31,9 +31,17 @@ require_clean_work_tree_git () {
     fi
 }
 
+check_directory () {
+  if [ ! -e "publish.sh" ] ; then
+  echo "Wrong dir"
+  exit
+  fi
+}
+
+check_directory
 require_clean_work_tree_git
 echo "Enter your netid"
 read netid
 # rsync over the public directory
 # from Angrave's original publish script
-rsync -ar --no-links --exclude /publish.sh * "$netid"@ssh.courses.engr.illinois.edu:/courses/cs241/fa2015
+rsync -ar --no-links --exclude /publish.sh * "$netid"@ssh.courses.engr.illinois.edu:/courses/cs241/fa2015/
