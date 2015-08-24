@@ -2,24 +2,23 @@
 	<!-- {{schedule}} -->
 	<div class = "row">
 		<div class = "large-4 columns show-for-large-up"><h2>Week</h2></div>
-		<div class = "large-2 columns show-for-large-up"><h2>Monday</h2></div>
-		<div class = "large-2 columns show-for-large-up"><h2>Wednesday</h2></div>
-		<div class = "large-2 columns show-for-large-up"><h2>Thurday Lab</h2></div>
-		<div class = "large-2 columns show-for-large-up"><h2>Friday</h2></div>
+		<div class = "large-2 columns show-for-large-up"><h2>Mon</h2></div>
+		<div class = "large-2 columns show-for-large-up"><h2>Wed</h2></div>
+		<div class = "large-2 columns show-for-large-up"><h2>Lab</h2></div>
+		<div class = "large-2 columns show-for-large-up"><h2>Fri</h2></div>
 	</div>
 	<div ng-repeat="week in schedule" class = "row" style = "padding-bottom:1%" >
 		<div class = "small-12 medium-12 large-4 columns"><h3>{{week.week}}</h3></div>
 		<div ng-repeat="day in week.schedule" class = "small-12 medium-12 large-2 columns">
 			<div class = "small-12 medium-12 columns hide-for-large-up"><h3>{{days[$index]}}</h3></div>
 			<div class="mdl-card mdl-shadow--2dp schedule-card" >
-				<div class="mdl-card__title" style = "background-color: {{day.color}}">
+				<div class="mdl-card__title scrollable" style = "background-color: {{day.color}}">
 					<h2 class="mdl-card__title-text" style = "color: white">{{day.title}}</h2>
 				</div>
-				<div class="mdl-card__supporting-text">
+				<div class="mdl-card__supporting-text scrollable">
 					{{day.summary}}
 				</div>
 				<div class="mdl-card__actions mdl-card--border" ng-bind-html="dontEscapeHtml(day.resources)">
-					<!-- Binding is done in the attributes -->
 				</div>
 			</div>
 		</div>

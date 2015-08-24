@@ -3,15 +3,15 @@
     "schedule": [
       {
         "title" : "Course Introduction",
-        "summary": "We are going to go over the syllabus",
-        "resources": "[notes] [slides-part1] [slides-part2]",
+        "summary": "We are going to go over the syllabus, our cheating policy, and overview the course",
+        "resources": "slides: [<a href = './data/resources/administrivia.pdf'>Administrivia</a> and <a href = './data/resources/cheating_policy.pdf'>Cheating Policy</a>], <a href = './data/resources/handout1.docx'>Course Overview Handout</a>, <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/dd045092-75c2-41ab-897a-28dbb68002f5?ec=true'>Recording</a>",
         "color": "#03a9f4"
       },
 
       {
         "title" : "Introduction to C",
-        "summary": "We are going to go over the syllabus",
-        "resources": "[notes] [slides-part1] [slides-part2] <a href='url'>link text</a>",
+        "summary": "We are going to dive into C programming",
+        "resources": "prelecture: [<a href = 'https://github.com/angrave/SystemProgramming/wiki/C-Programming%2C-Part-1%3A-Introduction'>Wikibook</a> and <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/e1c6f7e8-0de8-4e69-90dd-a58a75867ac6?ec=true'>Wade Lecture</a>]",
         "color": "#03a9f4"
       },
 

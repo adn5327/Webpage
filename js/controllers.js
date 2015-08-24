@@ -29,5 +29,7 @@ mainControllers.controller('ScheduleController', ['$scope', '$http', '$sce', fun
     $scope.dontEscapeHtml = function(html) {
       return $sce.trustAsHtml(html);
     };
+    console.log($('.scrollable'));
+    // $('.scrollable').perfectScrollbar('update');
   });
 }]);
