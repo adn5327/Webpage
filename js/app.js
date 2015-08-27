@@ -30,3 +30,20 @@ mainApp.config(['$routeProvider', function($routeProvider) {
     redirectTo: '/overview'
   });
 }]);
+
+var labApp = angular.module('labApp', ['ngRoute', 'mainControllers']);
+
+labApp.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.
+    when('/schedule', {
+    templateUrl: 'partials/labs/schedule.html',
+    controller: 'ScheduleController'
+  }).
+  when('/lab1', {
+    templateUrl: 'partials/labs/lab1.html',
+    controller: 'Lab1Controller'
+  }).
+  otherwise({
+    redirectTo: '/schedule'
+  });
+}]);

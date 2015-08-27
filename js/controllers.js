@@ -33,3 +33,13 @@ mainControllers.controller('ScheduleController', ['$scope', '$http', '$sce', fun
     // $('.scrollable').perfectScrollbar('update');
   });
 }]);
+
+var labControllers = angular.module('labControllers', []);
+
+labControllers.controller('ScheduleController', ['$scope', function($scope) {
+
+}]);
+
+labControllers.controller('Lab1Controller', ['$scope', function($scope) {
+
+}]);
