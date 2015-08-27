@@ -16,6 +16,10 @@ html {
   font-family: 'Roboto' !important;
 }
 
+.content {
+  margin: 0 auto;
+  width: 80%;
+}
 .large-card.mdl-card{
   width:100%;
   margin: 0 auto;
@@ -69,4 +73,10 @@ html {
   height: 500px;
   overflow-y: hidden;
   position: relative;
+}
+
+.terminal {
+  background-color: black;
+	color: white;
+	font-family: monospace;
 }
