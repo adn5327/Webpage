@@ -11,7 +11,7 @@
       {
         "title" : "Introduction to C",
         "summary": "We are going to dive into C programming",
-        "resources": "prelecture: [<a href = 'https://github.com/angrave/SystemProgramming/wiki/C-Programming%2C-Part-1%3A-Introduction'>Wikibook</a> and <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/e1c6f7e8-0de8-4e69-90dd-a58a75867ac6?ec=true'>Wade Lecture</a>]",
+        "resources": "prelecture: [<a href = 'https://github.com/angrave/SystemProgramming/wiki/C-Programming%2C-Part-1%3A-Introduction'>Wikibook</a> and <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/e1c6f7e8-0de8-4e69-90dd-a58a75867ac6?ec=true'>Wade Lecture</a>], <a href = './data/resources/handout2.docx'>Intro To C Handout</a>",
         "color": "#03a9f4"
       },
 
@@ -23,9 +23,9 @@
       },
 
       {
-        "title" : "C No Evil",
-        "summary": "We are going to go over the syllabus",
-        "resources": "[notes] [slides-part1] [slides-part2]",
+        "title" : "Text Input and Output in C",
+        "summary": "We are going to go over all sorts of text input and output",
+        "resources": "prelecture: [<a href = 'https://github.com/angrave/SystemProgramming/wiki/C-Programming%2C-Part-2%3A-Text-Input-And-Output'>Wikibook</a> and <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/e1c6f7e8-0de8-4e69-90dd-a58a75867ac6?ec=true'>Wade Lecture</a>]",
         "color": "#03a9f4"
       }
     ],
