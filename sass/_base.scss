@@ -74,6 +74,13 @@ html {
   overflow-x:hidden;
 }
 
+.overflow.mdl-card__title-text {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
 .terminal {
   background-color: black;
 	color: white;
@@ -84,6 +91,10 @@ html {
 /* Let's get this party started */
 ::-webkit-scrollbar {
     width: 6px;
+}
+
+::-webkit-scrollbar-track:horizontal {
+    height: 6px;
 }
 
 /* Track */
