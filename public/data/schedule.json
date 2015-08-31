@@ -11,7 +11,7 @@
       {
         "title" : "C Crash Course",
         "summary": "We are going to dive into C programming",
-        "resources": "prelecture: [<a href = 'https://github.com/angrave/SystemProgramming/wiki/C-Programming%2C-Part-1%3A-Introduction'>Wikibook</a> and <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/e1c6f7e8-0de8-4e69-90dd-a58a75867ac6?ec=true'>Wade Lecture</a>], <a href = './data/resources/handout2.docx'>Handout</a>, <a href ='https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/dd045092-75c2-41ab-897a-28dbb68002f5?ec=true'>Recording</a>",
+        "resources": "prelecture: [<a href = 'https://github.com/angrave/SystemProgramming/wiki/C-Programming%2C-Part-1%3A-Introduction'>Intro to C Notes</a> and <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/e1c6f7e8-0de8-4e69-90dd-a58a75867ac6?ec=true'>Wade Lecture</a>], <a href = './data/resources/handout2.docx'>Handout</a>, <a href ='https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/dd045092-75c2-41ab-897a-28dbb68002f5?ec=true'>Recording</a>",
         "color": "#03a9f4"
       },
 
@@ -24,8 +24,8 @@
 
       {
         "title" : "Pointers and Structures",
-        "summary": "We are going to go over all sorts of text input and output",
-        "resources": "prelecture: [<a href = 'https://github.com/angrave/SystemProgramming/wiki/C-Programming%2C-Part-2%3A-Text-Input-And-Output'>Wikibook</a> and <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/e1c6f7e8-0de8-4e69-90dd-a58a75867ac6?ec=true'>Wade Lecture</a>], <a href = './data/resources/handout3.docx'>Handout</a>, <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/fffa4882-5c74-4378-afd9-d7b5a2be244b?ec=true'>Recording</a>",
+        "summary": "We are going to go over pointers in details",
+        "resources": "prelecture: [ <a href = 'https://github.com/angrave/SystemProgramming/wiki/C-Programming%2C-Part-3%3A-Common-Gotchas'>Gotcha Notes</a>, <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/e1c6f7e8-0de8-4e69-90dd-a58a75867ac6?ec=true'>Wade Lecture</a>], <a href = './data/resources/handout3.docx'>Handout</a>, <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/fffa4882-5c74-4378-afd9-d7b5a2be244b?ec=true'>Recording</a>",
         "color": "#03a9f4"
       }
     ],
@@ -34,29 +34,29 @@
   {
     "schedule": [
       {
-        "title" : "Operating Systems",
-        "summary": "We are going to go over the syllabus",
+        "title" : "Structures and I/O",
+        "summary": "We are going to go over C structs and I/O",
+        "resources": "prelecture: [<a href = 'https://github.com/angrave/SystemProgramming/wiki/Memory%2C-Part-1%3A-Heap-Memory-Introduction'>Heap Notes</a>, <a href = 'https://github.com/angrave/SystemProgramming/wiki/C-Programming%2C-Part-2%3A-Text-Input-And-Output'>Text I/O notes</a>],<a href = './data/resources/handout4.docx'>Handout</a>, <a href ='https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/dd045092-75c2-41ab-897a-28dbb68002f5?ec=true'>Recording</a> ",
+        "color": "#64dd17"
+      },
+
+      {
+        "title" : "TBA",
+        "summary": "TBA",
         "resources": "[notes] [slides-part1] [slides-part2]",
         "color": "#64dd17"
       },
 
       {
-        "title" : "System Calls",
-        "summary": "We are going to go over the syllabus",
-        "resources": "[notes] [slides-part1] [slides-part2]",
-        "color": "#64dd17"
-      },
-
-      {
-        "title" : "Lab GDB",
-        "summary": "We are going to go over the syllabus",
+        "title" : "TBA",
+        "summary": "TBA",
         "resources": "[notes] [slides-part1] [slides-part2]",
         "color": "#ffd600"
       },
 
       {
-        "title" : "Memory Intro",
-        "summary": "We are going to go over the syllabus",
+        "title" : "TBA",
+        "summary": "TBA",
         "resources": "[notes] [slides-part1] [slides-part2]",
         "color": "#009688"
       }
