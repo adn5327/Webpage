@@ -1,18 +1,30 @@
 <div class = "row" ng-controller = 'OverviewController'>
   <div class="small-12 medium-12 large-8 large-centered columns">
     <h1>Text Editor</h1>
+    <h2>DO NOT START LAB UNLESS TOLD TO DO SO! (WE MIGHT CHANGE THE SPECS)</h2>
     <ul class="toc">
       <h4>Contents</h4>
       <a href="#lab2/#demo">Demo</a>
       <a href="#lab2/#overview">Overview</a>
-      <a href="#lab2/#datastructure">Data-Structure</a>
       <a href="#lab2/#stdin">Reading From Standard Input</a>
+      <a href="#lab2/#data">Data-Structure</a>
       <a href="#lab2/#print">Printing Content</a>
       <a href="#lab2/#write">Writing Text</a>
       <a href="#lab2/#find">Finding Text</a>
       <a href="#lab2/#save">Saving Text</a>
       <a href="#lab2/#quit">Closing Your Text Editor</a>
     </ul>
+    <!-- Demo -->
+    <div class = "pad">
+      <div id = "demo" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">Demo</h2>
+        </div>
+        <div class = "content">
+          Your section leaders will demo a working implementation of this text editor.
+        </div>
+      </div>
+    </div>
     <!-- Overview -->
     <div class = "pad">
       <div id = "overview" class="mdl-card mdl-shadow--2dp large-card">
@@ -21,7 +33,7 @@
         </div>
         <div class = "content">
           <h6>You will be making your own simple text editor in C!</h6>
-          Your editor can be run like any other editor as: <pre class = "terminal">./editor [file_name]</pre>
+          Your editor can be run like any other editor as: <pre class = "terminal">./editor &ltfilename&gt</pre>
           Run your editor program with the file name provided as input and store the contents of the file in a data structure.
           Your program should accept commands from the user in an interactive manner (from stdin). Make sure you can perform the following
           basic tasks from your editor program:
@@ -31,12 +43,13 @@
             <li><a href="#lab2/#display">Display the contents of a file.</a></li>
             <li><a href="#lab2/#quit">Save the file.</a></li>
           </ol>
+          Nota Bene: Lines will be 1 indexed for this assignment!
         </div>
       </div>
     </div>
     <!-- Reading From Standard Input -->
     <div class = "pad">
-      <div id = "datastructure" class="mdl-card mdl-shadow--2dp large-card">
+      <div id = "stdin" class="mdl-card mdl-shadow--2dp large-card">
         <div class="mdl-card__title" style = "background-color: #03a9f4">
           <h2 class="mdl-card__title-text" style = "color: white">Reading From Standard Input</h2>
         </div>
@@ -53,7 +66,7 @@
     </div>
     <!-- Data Structure -->
     <div class = "pad">
-      <div id = "stdin" class="mdl-card mdl-shadow--2dp large-card">
+      <div id = "data" class="mdl-card mdl-shadow--2dp large-card">
         <div class="mdl-card__title" style = "background-color: #03a9f4">
           <h2 class="mdl-card__title-text" style = "color: white">Data Structure</h2>
         </div>
@@ -62,7 +75,15 @@
           How you implement this is completely up to you and you should decide upon this based on your knowledge of C strings.
           Note that we have provided an empty 'init' and 'destroy' function
           that you should use to initially load your data structure when your text editor is launched and destroy when a user inputs the quit command.
-          Note that your init should malloc your data structure on the heap and destroy should free all memory.
+          Note that your init should malloc your data structure on the heap and destroy should free all memory.<br/>
+          Please keep the following in mind when making your data structure
+          <ol>
+            <li>Lines are 1 indexed</li>
+            <li>There is no limit on the number of lines</li>
+            <li>There is no limit on the number of character perline</li>
+            <li>Some lines may be empty</li>
+            <li>Some lines might have a newline</li>
+          </ol>
         </div>
       </div>
     </div>
@@ -103,12 +124,14 @@
           The old line 4 and all subsequent lines get shifted down. <br/><br/>
           Please note that all these write operations will only modify your datastructure and not the actual file.
           Only when the user runs the save command will you write the changes over to the actual file.
+          Also note that if your editor is asked to write to a line that does not exist yet, then it should fill in the gap with empty lines.
+          For example if you are asked to write to line 10 in a 3 line file, then lines 4 to 9 should be empty lines.
         </div>
       </div>
     </div>
     <!-- Finding Text -->
     <div class = "pad">
-      <div id = "write" class="mdl-card mdl-shadow--2dp large-card">
+      <div id = "find" class="mdl-card mdl-shadow--2dp large-card">
         <div class="mdl-card__title" style = "background-color: #03a9f4">
           <h2 class="mdl-card__title-text" style = "color: white">Finding Text</h2>
         </div>
@@ -141,7 +164,7 @@
     </div>
     <!-- Closing Your Text Editor -->
     <div class = "pad">
-      <div id = "close" class="mdl-card mdl-shadow--2dp large-card">
+      <div id = "quit" class="mdl-card mdl-shadow--2dp large-card">
         <div class="mdl-card__title" style = "background-color: #03a9f4">
           <h2 class="mdl-card__title-text" style = "color: white">Closing Your Text Editor</h2>
         </div>
