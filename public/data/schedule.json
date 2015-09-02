@@ -41,9 +41,9 @@
       },
 
       {
-        "title" : "TBA",
-        "summary": "TBA",
-        "resources": "[notes] [slides-part1] [slides-part2]",
+        "title" : "File I/O",
+        "summary": "A little more on structs, c file io basics, posix file io, and scanf. Multidimensional arrays if we have time.",
+        "resources": "prelecture: [<a href = 'https://www.cs.bu.edu/teaching/c/file-io/intro/'>File I/O notes</a>]",
         "color": "#64dd17"
       },
 
