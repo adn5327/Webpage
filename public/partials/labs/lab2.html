@@ -21,7 +21,7 @@
           <h2 class="mdl-card__title-text" style = "color: white">Demo</h2>
         </div>
         <div class = "content">
-          Your section leaders will demo a working implementation of this text editor.
+          <h6>Your section leaders will demo a working implementation of this text editor.</h6>
         </div>
       </div>
     </div>
@@ -55,10 +55,10 @@
           <h2 class="mdl-card__title-text" style = "color: white">Reading From Standard Input</h2>
         </div>
         <div class = "content">
-          <h6>Your text editor needs to be able to parse arguments and read from standard input<h6>
+          <h6>Your text editor needs to be able to parse arguments and read from standard input.<h6>
           You need to parse arguments because a user will launch your editor with the following command:
           <pre class = "terminal">./editor [filename]</pre>
-          So you will need to be able to parse the name of the file and open it.
+          So you will need to be able to get the name of file from argv[] and open it.
           If the file does not exist, then just make it when the user saves (have an empty data structure for now).
           <h6>You will also need to be able to read from standard input for when the user gives your text editor a command like:<h6>
           <pre class = "terminal">w 3 I like cats</pre>
@@ -72,7 +72,7 @@
           <h2 class="mdl-card__title-text" style = "color: white">Data Structure</h2>
         </div>
         <div class = "content">
-          <h6>Your text editor needs a data structure to store the contents of the file<h6>
+          <h6>Your text editor needs a data structure to store the contents of the file.<h6>
           How you implement this is completely up to you and you should decide upon this based on your knowledge of C strings.
           Note that we have provided an empty 'init' and 'destroy' function
           that you should use to initially load your data structure when your text editor is launched and destroy when a user inputs the quit command.
@@ -81,9 +81,8 @@
           <ol>
             <li>Lines are 1 indexed</li>
             <li>There is no limit on the number of lines</li>
-            <li>There is no limit on the number of character perline</li>
+            <li>There is no limit on the number of characters perline</li>
             <li>Some lines may be empty</li>
-            <li>Some lines might have a newline</li>
           </ol>
         </div>
       </div>
@@ -95,16 +94,16 @@
           <h2 class="mdl-card__title-text" style = "color: white">Printing Content</h2>
         </div>
         <div class = "content">
-          <h6>Your text editor should be able to print out the content of its data structure<h6>
+          <h6>Your text editor should be able to print out the content of its data structure.<h6>
           After a user has launched your editor, they can ask it to print out the contents of its data structure by entering commands into standard input.
           There are two ways your user can ask your editor to do this.
           The first is by asking you to print the entirety of your data structure to standard out with the following command:
           <pre class = "terminal">p</pre>
           And the second is by asking you to print out just one line with the following command:
           <pre class = "terminal">p 3</pre>
-          which should print out just line 3 (if line 3 does not exist, then this is a no op) like so
+          which should print out just line 3 (if line 3 does not exist or empty, then this is a no op) like so
           <pre class = "terminal">3   I like cats!</pre>
-          There is a tab inbetween the line number and the line.
+          There is a tab inbetween the line number and the line ('\t' is the character escape for tab).
         </div>
       </div>
     </div>
@@ -117,14 +116,18 @@
         <div class = "content">
           <h6>There are two ways that your editor should be able to write to a file once it is launched.<h6>
           The first way to write to a file is to OVERWRITE a line completely with the following command:
-          <pre class = "terminal">w 3 I like cats!\nDogs are alright.</pre>
-          This will first OVERWRITE line 3 with "I like cats!".
-          Second, because there is a newline character, this will ALSO create a NEW line that will become line 4 and read "Dogs are alright.".
-          The old line 4 and all subsequent lines get shifted down. <br/><br/>
+          <pre class = "terminal">w 3 I like cats!</pre>
+          This will OVERWRITE line 3 with "I like cats!".
           The second way to write to a file is to APPEND a line with the following command:
-          <pre class = "terminal">a 3 I like cats!\n</pre>
-          This will APPEND to line 3 "I like cats!" AND create a NEW line that will become line 4, but will be empty.
-          The old line 4 and all subsequent lines get shifted down. <br/><br/>
+          <pre class = "terminal">a 3 I like cats!</pre>
+          This will APPEND to line 3 "I like cats!".
+          An extra feature your editor needs to account for is a newline escape (a backslash followed by lowercase n).
+          For example the user can input the following:
+          <pre class = "terminal">w 3 I like cats!\nDogs are alright.</pre>
+          This will OVERWRITE line 3 with "I like cats!".
+          Second, because there is a newline escape (the backslash n), this will ALSO create a NEW line that will become line 4 and read "Dogs are alright.".
+          The old line 4 and all subsequent lines after get shifted down.
+          Both the "w" and "a" modes may contain multiple newline escapes, and an additional line should be inserted for each.<br/><br/>
           Please note that all these write operations will only modify your datastructure and not the actual file.
           Only when the user runs the save command will you write the changes over to the actual file.
           Also note that if your editor is asked to write to a line that does not exist yet, then it should fill in the gap with empty lines.
@@ -139,7 +142,7 @@
           <h2 class="mdl-card__title-text" style = "color: white">Finding Text</h2>
         </div>
         <div class = "content">
-          <h6>Your text editor should be able to find all occurrences of a word and display the words with their line numbers<h6>
+          <h6>Your text editor should be able to find all occurrences of a word and display the words with their line numbers.<h6>
           Remember the searching should be done on the data structure and not the actual file.
           So if your user has made some changes since they opened the file, then your editor should be able to find the words in those changes.
           If your user inputs the following into standard input:
@@ -158,7 +161,7 @@
           <h2 class="mdl-card__title-text" style = "color: white">Saving Text</h2>
         </div>
         <div class = "content">
-          <h6>Your text editor should be able to save back all the changes to the file<h6>
+          <h6>Your text editor should be able to save back all the changes to the file.<h6>
           So if your user inputs the following into standard input:
           <pre class = "terminal">s</pre>
           Then your text editor should write back everything to the file.
@@ -172,7 +175,7 @@
           <h2 class="mdl-card__title-text" style = "color: white">Closing Your Text Editor</h2>
         </div>
         <div class = "content">
-          <h6>Your text editor should be able to close without memory leaks<h6>
+          <h6>Your text editor should be able to close without memory leaks.<h6>
           So if your user inputs the following into standard input:
           <pre class = "terminal">q</pre>
           Then your text editor should quit and free your data structure (even if there are changes the user has not saved).
