@@ -147,7 +147,7 @@
     </blockquote>
 
     <p>
-      To complete Part 2, you must complete the program <tt>part2-main.c</tt> so that <tt>part2-main.c</tt> makes calls to all twelve functions in <tt>part2-functions.c</tt> such that they print their &quot;Illinois&quot; line.  When running
+      To complete Part 2, you must complete the program <tt>part2-main.c</tt> so that <tt>part2-main.c</tt> makes calls to all twelve functions in <tt>part2-functions.c</tt> such that they print their &quot;Illinois&quot; line. The struct data_t, the val_t Union and type_t enum are in the part2-functions.h header file. <br> When running
       <tt>./part2</tt>, your output should look exactly like:
     </p>
 
@@ -173,6 +173,7 @@
   <br/>
   <br/> <b> 1) Any float or integer in the problem will not be longer than 4 digits. </b>
   <br/> <b> 2) When a float is appended to a string, it is truncated to 2 decimal places. </b>
+ <br/> <b>  3) All string values in data_t that is returned by func must be malloc-ed in func as it will be attempted to be freed by tricky_step </b> 
 
   <br/>
 
