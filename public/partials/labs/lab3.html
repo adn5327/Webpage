@@ -1,0 +1,205 @@
+<div class = "row" ng-controller = 'OverviewController'>
+  <div class="small-12 medium-12 large-8 large-centered columns">
+    <h1>Utilities Unleashed</h1>
+    <h2>DO NOT START LAB UNLESS TOLD TO DO SO! (WE MIGHT CHANGE THE SPECS)</h2>
+    <ul class="toc">
+      <h4>Contents</h4>
+      <a href="#lab3/#demo">Demo</a>
+      <a href="#lab3/#overview">Overview</a>
+      <a href="#lab3/#objectives">Learning Objectives</a>
+      <a href="#lab3/setup">Setup</a>
+      <a href="#lab3/#cat">cat</a>
+      <a href="#lab3/#sort">sort</a>
+      <a href="#lab3/#time">time</a>
+      <a href="#lab3/#date">date</a>
+      <a href="#lab3/#wc">wc</a>
+      <a href="#lab3/#ediff">ediff (easy diff)</a>
+    </ul>
+    <!-- Demo -->
+    <div class = "pad">
+      <div id = "demo" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">Demo</h2>
+        </div>
+        <div class = "content">
+          <h6>Your section leaders will demo a working implementation of all the C utilities.</h6>
+        </div>
+      </div>
+    </div>
+    <!-- Overview -->
+    <div class = "pad">
+      <div id = "overview" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">Overview</h2>
+        </div>
+        <div class = "content">
+          <h6>In this lab you will be implementing the following 5 C utilities.</h6>
+          <ul>
+            <li><a href="#lab3/#cat">cat</a></li>
+            <li><a href="#lab3/#sort">sort</a></li>
+            <li><a href="#lab3/#time">time</a></li>
+            <li><a href="#lab3/#date">date</a></li>
+            <li><a href="#lab3/#wc">wc</a></li>
+            <li><a href="#lab3/#ediff">ediff (easy diff)</a></li>
+          </ul>
+          Do not worry about flags or features that we do not mention and write all debug logs to standard error.
+        </div>
+      </div>
+    </div>
+    <!-- Setup -->
+    <div class = "pad">
+      <div id = "setup" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">Setup</h2>
+        </div>
+        <div class = "content">
+          <pre class = "terminal">
+cd cs241
+svn up
+cd utilities_unleashed
+          </pre>
+        </div>
+      </div>
+    </div>
+    <!-- cat -->
+    <div class = "pad">
+      <div id = "cat" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">cat</h2>
+        </div>
+        <div class = "content">
+          <h6>In this lab you will be implementing 'cat'.</h6>
+          cat - concatenate files and print on the standard output.
+          So if a user enters
+          <pre class = "terminal">
+            cat hello.txt world.txt
+          </pre>
+          then cat will output all the lines of hello.txt followed by world.txt.
+          So if hello.txt contained <pre class = "terminal">hello</pre>
+          and world.txt contained <pre class = "terminal">world</pre>
+          then <pre class = "terminal">cat hello.txt world.txt</pre>
+          would print out
+          <pre class = "terminal">
+hello
+world
+          </pre>
+        </div>
+      </div>
+    </div>
+    <!-- sort -->
+    <div class = "pad">
+      <div id = "sort" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">sort</h2>
+        </div>
+        <div class = "content">
+          <h6>In this lab you will be implementing 'sort'.</h6>
+          sort - sort lines of text files
+          So if a user enters
+          <pre class = "terminal">sort file1.txt file2.txt</pre>
+          then sort will output all the lines of file1.txt file2.txt in sorted order.
+          So if file1.txt contained
+          <pre class = "terminal">
+3.14
+pi
+          </pre>
+          and file2.txt contained
+          <pre class = "terminal">
+e
+2.17
+          </pre>
+          then
+          <pre class = "terminal">
+sort file1.txt file2.txt
+          </pre>
+          would print out
+          <pre class = "terminal">
+2.17
+3.14
+e
+pi
+          </pre>
+        </div>
+      </div>
+    </div>
+    <!-- time -->
+    <div class = "pad">
+      <div id = "time" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">time</h2>
+        </div>
+        <div class = "content">
+          <h6>In this lab you will be implementing 'time'.</h6>
+          time - run programs and report how long they took
+          So if a user enters
+          <pre class = "terminal">time ./prog1 --- ./prog2</pre>
+          Notice that the programs are seperated by " --- ".
+          then time will run prog1 THEN prog2 and record how long it took in seconds
+          the format should be the amount of time it took in seconds out to the 6th decimal place + " seconds".
+          Note that we only care about wall clock time.
+        </div>
+      </div>
+    </div>
+    <!-- date -->
+    <div class = "pad">
+      <div id = "time" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">date</h2>
+        </div>
+        <div class = "content">
+          <h6>In this lab you will be implementing 'date'.</h6>
+          For this one you should match exactly what the default date does.
+          <pre class = "terminal">man date</pre>
+        </div>
+      </div>
+    </div>
+    <!-- wc -->
+    <div class = "pad">
+      <div id = "time" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">wc</h2>
+        </div>
+        <div class = "content">
+          <h6>In this lab you will be implementing 'wc'.</h6>
+          wc - print newline, word, and byte counts for each file.
+          Just follow the format of the actual wc.
+          <pre class = "terminal">man wc</pre>
+        </div>
+      </div>
+    </div>
+    <!-- ediff -->
+    <div class = "pad">
+      <div id = "ediff" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">ediff</h2>
+        </div>
+        <div class = "content">
+          <h6>In this lab you will be implementing 'ediff'.</h6>
+          ediff - compare files line by line.
+          So if a user enters
+          <pre class = "terminal">ediff file1.txt file2.txt</pre>
+          and if file1.txt contained
+          <pre class = "terminal">
+a
+2
+c
+          </pre>
+          and file2.txt contained
+          <pre class = "terminal">
+1
+2
+3
+          </pre>
+          then the print out would be
+          <pre class = "terminal">
+<    a
+>    1
+<    c
+>    3
+          </pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

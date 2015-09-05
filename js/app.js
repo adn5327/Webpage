@@ -43,6 +43,14 @@ labApp.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'partials/labs/lab1.html',
     controller: 'Lab1Controller'
   }).
+  when('/lab2', {
+    templateUrl: 'partials/labs/lab2.html',
+    controller: 'Lab2Controller'
+  }).
+  when('/lab3', {
+    templateUrl: 'partials/labs/lab3.html',
+    controller: 'Lab3Controller'
+  }).
   otherwise({
     redirectTo: '/schedule'
   });
