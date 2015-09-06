@@ -75,6 +75,6 @@
       }
     ],
     "week": "September 7 - 13",
-    "announcement": "Computerized Testing this Week!"
+    "announcement": "Computerized Testing this Week! <a href = './data/resources/quiz1_coverage.txt'>Quiz Coverage</a> <a href = './data/resources/quiz1_practice.pdf'>Practice Quiz</a>"
   }
 ]

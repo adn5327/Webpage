@@ -25,7 +25,7 @@ mainControllers.controller('StaffController', ['$scope', '$http', function($scop
 mainControllers.controller('ScheduleController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
   $http.get('./data/schedule.json').success(function(data) {
     $scope.schedule = data;
-    $scope.days = ["Monday", "Wednesday", "Thursday Lab", "Friday"];
+    $scope.days = ["Monday", "Wednesday", "Friday"];
     $scope.dontEscapeHtml = function(html) {
       return $sce.trustAsHtml(html);
     };
