@@ -16,20 +16,14 @@
       },
 
       {
-        "title" : "Know Your Tools",
-        "summary": "We are going to go over all the tools you will be using throughout the semester",
-        "resources": "<a href = 'https://courses.engr.illinois.edu/cs241/labs.html#/lab1'>Lab Specs</a>",
-        "color": "#ffd600"
-      },
-
-      {
         "title" : "Pointers and Structures",
         "summary": "We are going to go over pointers in details",
         "resources": "prelecture: [ <a href = 'https://github.com/angrave/SystemProgramming/wiki/C-Programming%2C-Part-3%3A-Common-Gotchas'>Gotcha Notes</a>, <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/e1c6f7e8-0de8-4e69-90dd-a58a75867ac6?ec=true'>Wade Lecture</a>], <a href = './data/resources/handout3.docx'>Handout</a>, <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/fffa4882-5c74-4378-afd9-d7b5a2be244b?ec=true'>Recording</a>",
         "color": "#03a9f4"
       }
     ],
-    "week": "August 24 - 30"
+    "week": "August 24 - 30",
+    "announcement": ""
   },
   {
     "schedule": [
@@ -48,19 +42,39 @@
       },
 
       {
-        "title" : "Text Editor",
-        "summary": "You will write your very own 1 line text editor to demonstrate your knowledge of C, Pointers, Structures, and I/O",
-        "resources": "<a href = 'https://courses.engr.illinois.edu/cs241/labs.html#/lab2'>Lab Specs</a>",
-        "color": "#ffd600"
-      },
-
-      {
         "title" : "Processes",
         "summary": "We are going to learn about processes, how to create them and the infamous fork, exec, wait paradigm",
-        "resources": "prelecture: [<a href = 'https://github.com/angrave/SystemProgramming/wiki/Forking%2C-Part-1%3A-Introduction'>Fork notes</a>, <a href = 'https://github.com/angrave/SystemProgramming/wiki/Forking%2C-Part-2%3A-Fork%2C-Exec%2C-Wait-Kill'>Fork, Exec, Wait</a>]",
+        "resources": "prelecture: [<a href = 'https://github.com/angrave/SystemProgramming/wiki/Forking%2C-Part-1%3A-Introduction'>Fork notes</a>, <a href = 'https://github.com/angrave/SystemProgramming/wiki/Forking%2C-Part-2%3A-Fork%2C-Exec%2C-Wait-Kill'>Fork, Exec, Wait</a>, <a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/c35518e8-0a0c-4ccc-978e-f2aeccfc8e37?ec=true'>Wade Lecture</a>], <a href = './data/resources/handout6.docx'>Handout</a>, ",
         "color": "#009688"
       }
     ],
-    "week": "August 31 and September 1 - 6"
+    "week": "August 31 and September 1 - 6",
+    "announcement": "Pointers Gone Wild and Text Editor Released!"
+  },
+  {
+    "schedule": [
+      {
+        "title" : "TBA",
+        "summary": "",
+        "resources": "",
+        "color": "#64dd17"
+      },
+
+      {
+        "title" : "TBA",
+        "summary": "",
+        "resources": "",
+        "color": "#64dd17"
+      },
+
+      {
+        "title" : "TBA",
+        "summary": "",
+        "resources": "",
+        "color": "#64dd17"
+      }
+    ],
+    "week": "September 7 - 13",
+    "announcement": "Computerized Testing this Week!"
   }
 ]
