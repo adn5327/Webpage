@@ -76,7 +76,7 @@
           How you implement this is completely up to you and you should decide upon this based on your knowledge of C strings.
           Note that we have provided an empty 'init' and 'destroy' function
           that you should use to initially load your data structure when your text editor is launched and destroy when a user inputs the quit command.
-          Note that your init should malloc your data structure on the heap and destroy should free all memory.<br/>
+          Note that your init should malloc the fields inside your data structure and destroy should free all memory.<br/>
           Please keep the following in mind when making your data structure
           <ol>
             <li>Lines are 1 indexed</li>
@@ -99,10 +99,14 @@
           There are two ways your user can ask your editor to do this.
           The first is by asking you to print the entirety of your data structure to standard out with the following command:
           <pre class = "terminal">p</pre>
-          And the second is by asking you to print out just one line with the following command:
+          Which will print the file (that here has 3 lines) like so:
+          <pre class = "terminal">1    This is a sentence.</pre>
+          <pre class = "terminal">2    Is this a question?</pre>
+          <pre class = "terminal">3    I like cats!</pre>
+          And the second way is by asking you to print out just one line with the following command:
           <pre class = "terminal">p 3</pre>
-          which should print out just line 3 (if line 3 does not exist or empty, then this is a no op) like so
-          <pre class = "terminal">3   I like cats!</pre>
+          which should print out just line 3 (if line 3 does not exist then this is a no op; if line 3 is empty then still print the line number and tab) like so
+          <pre class = "terminal">3    I like cats!</pre>
           There is a tab inbetween the line number and the line ('\t' is the character escape for tab).
         </div>
       </div>
