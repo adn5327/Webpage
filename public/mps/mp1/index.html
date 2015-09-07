@@ -78,7 +78,7 @@
 
 			<p>One thing we know is that good code is generally modular--it consists of discrete "units" of functionality that are only responsible for certain behavior. In our case, where we're working with C, these units are primarily functions.</p>
 
-			<p>For example, the C string function <code class="code-block">strlen</code> is responsible solely for determining the length of a string; it doesn't do any I/O or networking. A function that knows all and tries to do all would be bad design, and testing whether that kind function adheres to expectations would be nontrivial.</p>
+			<p>For example, the C string function <code class="code-block">strlen</code> is responsible solely for determining the length of a string; it doesn't do any I/O or networking. A function that knows all and tries to do all would be bad design, and testing whether that kind of function adheres to expectations would be nontrivial.</p>
 
 			<p>A programmer might ask, "Do my units of work behave the way I expect? If my function expects a string, how does it behave when given <code class="code-block">NULL</code>?". These are crucial questions, since ensuring that units of code work exactly the way one would expect makes it easy to build reliable and robust software. An unreliable unit in a large system can affect the entire system significantly. Imagine if <code class="code-block">strcpy</code>, for example, did not behave properly on all inputs; all of the higher-level units that use <code class="code-block">strcpy</code>, and all of the units that interact with those units, would in-turn have unpredictable behavior, and so the unreliablity would propagate through the whole system.</p>
 
@@ -192,7 +192,7 @@
             <ul>
 			    <li>The <code class="code-block">target_basket</code> field of the <code class="code-block">report_t</code> that you return a pointer to should point to the middle basket of the array. If the array does not have a middle basket, the <code class="code-block">target_basket</code> field should be set to <code class="code-block">NULL</code>. Note: a middle basket <em>must</em> have an equal number of baskets to its left and to its right.</li>
 			    <li>The labels of the baskets should be shifted one to the right. That is, the <code class="code-block">label</code> field of basket n+1 should be changed to the <code class="code-block">label</code> field of basket n. Use <code class="code-block">strcpy</code>. The shifting should wrap so that the first basket's <code class="code-block">label</code> will be the last basket's initial <code class="code-block">label</code>.The <code class="code-block">label</code>s should still point to the same place in memory, so do not simply manipulate the pointers. Remember: each <code class="code-block">label</code> field is guaranteed to point to a 5 character string.</li>
-			    <li>The <code class="code-block">triples_summed</code> field of the <code class="code-block">report_t</code> struct that you return a pointer to should contain the sum of the <code class="code-block">offset</code> fields of the baskets, three at a time, if at least three baskets are present. If fewer than three baskets are present, <code class="code-block">triples_summed</code> should be 0. For example, for four baskets, you would sum the first three baskets' <code class="code-block">offset</code> fields, and then the last three baskets' <code class="code-block">offset</code> fields, and set <code class="code-block">tripled_summed</code> to the result.</li>
+			    <li>The <code class="code-block">triples_summed</code> field of the <code class="code-block">report_t</code> struct that you return a pointer to should contain the sum of the <code class="code-block">offset</code> fields of the baskets, three at a time, if at least three baskets are present. If fewer than three baskets are present, <code class="code-block">triples_summed</code> should be 0. For example, for five baskets, you would sum the first three baskets' <code class="code-block">offset</code> fields, and then the <code class="code-block">offset</code> fields of baskets 2 through 4, and then the <code class="code-block">offset</code> fields for baskets 3 through 5, and store the entire total in the <code class="code-block">triples_summed</code> field. For five baskets with all <code class="code-block">offset</code>s set to 1, <code class="code-block">triples_summed</code> would be 9.
 			    <li>Finally, if the <code class="code-block">triples_summed</code> field is 0, the <code class="code-block">bad_batch</code> field of the struct you return should be set to the first basket, if it exists, or <code class="code-block">NULL</code> otherwise.</li>
             </ul>
 
@@ -221,7 +221,7 @@
 
             <h2>Grading</h2>
 
-            <p>Each function is allocated 50% of the points for this MP. Detecting edge cases is worth 50% of each function.</p>
+            <p>Each function is allocated 50% of the points for this MP. Test coverage is worth 50% of each function.</p>
 
             <p><strong>The edge cases will be weighted based on the criterion of extremity.</strong> In other words, the weight of a test case is inversely correlated with its level of triviality.</p>
 
