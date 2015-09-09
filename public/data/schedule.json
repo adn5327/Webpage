@@ -55,15 +55,15 @@
     "schedule": [
       {
         "title" : "LABOR DAY!!!",
-        "summary": "We will not be working, sleeping in, and having fun.",
         "resources": "",
+        "summary": "We will be sleeping in and having fun.",
         "color": "#64dd17"
       },
 
       {
-        "title" : "TBA",
-        "summary": "",
-        "resources": "",
+        "title" : "Forking + Signals",
+        "summary": "We will continue taking about what happens when you fork",
+        "resources": "prelecture: [<a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/f07a5b59-58c1-4ae0-8978-eeea57c5ccff?ec=true'>Wade Lecture</a>]",
         "color": "#64dd17"
       },
 
