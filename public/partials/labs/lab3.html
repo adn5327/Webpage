@@ -8,12 +8,15 @@
       <a href="#lab3/#overview">Overview</a>
       <a href="#lab3/#objectives">Learning Objectives</a>
       <a href="#lab3/setup">Setup</a>
-      <a href="#lab3/#cat">cat</a>
-      <a href="#lab3/#sort">sort</a>
+      <!-- <a href="#lab3/#cat">cat</a> -->
+      <!-- <a href="#lab3/#sort">sort</a> -->
       <a href="#lab3/#time">time</a>
-      <a href="#lab3/#date">date</a>
-      <a href="#lab3/#wc">wc</a>
-      <a href="#lab3/#ediff">ediff (easy diff)</a>
+      <a href="#lab3/#race">race</a>
+      <a href="#lab3/#run">run</a>
+      <a href="#lab3/#env">env</a>
+      <!-- <a href="#lab3/#date">date</a> -->
+      <!-- <a href="#lab3/#wc">wc</a> -->
+      <!-- <a href="#lab3/#ediff">ediff (easy diff)</a> -->
     </ul>
     <!-- Demo -->
     <div class = "pad">
@@ -35,12 +38,15 @@
         <div class = "content">
           <h6>In this lab you will be implementing the following 5 C utilities.</h6>
           <ul>
-            <li><a href="#lab3/#cat">cat</a></li>
-            <li><a href="#lab3/#sort">sort</a></li>
-            <li><a href="#lab3/#time">time</a></li>
-            <li><a href="#lab3/#date">date</a></li>
-            <li><a href="#lab3/#wc">wc</a></li>
-            <li><a href="#lab3/#ediff">ediff (easy diff)</a></li>
+            <!-- <li><a href="#lab3/#cat">cat</a></li> -->
+            <!-- <li><a href="#lab3/#sort">sort</a></li> -->
+            <a href="#lab3/#time">time</a>
+            <a href="#lab3/#race">race</a>
+            <a href="#lab3/#run">run</a>
+            <a href="#lab3/#env">env</a>
+            <!-- <li><a href="#lab3/#date">date</a></li> -->
+            <!-- <li><a href="#lab3/#wc">wc</a></li> -->
+            <!-- <li><a href="#lab3/#ediff">ediff (easy diff)</a></li> -->
           </ul>
           Do not worry about flags or features that we do not mention and write all debug logs to standard error.
         </div>
@@ -62,7 +68,7 @@ cd utilities_unleashed
       </div>
     </div>
     <!-- cat -->
-    <div class = "pad">
+    <!-- <div class = "pad">
       <div id = "cat" class="mdl-card mdl-shadow--2dp large-card">
         <div class="mdl-card__title" style = "background-color: #03a9f4">
           <h2 class="mdl-card__title-text" style = "color: white">cat</h2>
@@ -82,9 +88,9 @@ hello
 world</pre>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- sort -->
-    <div class = "pad">
+    <!-- <div class = "pad">
       <div id = "sort" class="mdl-card mdl-shadow--2dp large-card">
         <div class="mdl-card__title" style = "background-color: #03a9f4">
           <h2 class="mdl-card__title-text" style = "color: white">sort</h2>
@@ -113,7 +119,7 @@ e
 pi</pre>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- time -->
     <div class = "pad">
       <div id = "time" class="mdl-card mdl-shadow--2dp large-card">
@@ -122,18 +128,100 @@ pi</pre>
         </div>
         <div class = "content">
           <h6>In this lab you will be implementing 'time'.</h6>
-          time - run programs and reports how long they took
+          time - run programs and reports how long they took.
           So if a user enters
-          <pre class = "terminal">time ./prog1 --- ./prog2</pre>
+          <pre class = "terminal">./time ./prog1 --- ./prog2</pre>
           Notice that the programs are seperated by " --- ".
           then time will run prog1 THEN prog2 and record how long it took in seconds.
           The format should be the amount of time it took in seconds out to the 6th decimal place + " seconds".
-          Note that we only care about wall clock time.
+          Note that we only care about wall clock time and that any number of programs can be run.
+          We will also always give you programs that terminate succesfully.
+          There will also always be at least one program.
+        </div>
+      </div>
+    </div>
+    <!-- race -->
+    <div class = "pad">
+      <div id = "race" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">race</h2>
+        </div>
+        <div class = "content">
+          <h6>In this lab you will be implementing 'race'.</h6>
+          race - run programs and reports which ran the fastest.
+          So if a user enters
+          <pre class = "terminal">./race ./prog1 --- ./prog2</pre>
+          Notice that the programs are seperated by " --- ".
+          then time will run prog1 THEN prog2 and report which ran faster.
+          The format should be the name of the program that ran the fastest.
+          Note that we only care about wall clock time and that as many programs can be run.
+          We will also always give you programs that terminate succesfully.
+          There will also always be at least two programs.
+        </div>
+      </div>
+    </div>
+    <!-- run -->
+    <div class = "pad">
+      <div id = "run" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">run</h2>
+        </div>
+        <div class = "content">
+          <h6>In this lab you will be implementing 'run'.</h6>
+          run - runs a bunch of programs given a list of files.
+          run takes a list of files to run a command on.
+          The first line of each file is a command to run for each of the subsequent lines.
+          Instances of open-close braces ({}) in the command will be replaced by the values in the subsequent lines and run in sequence.
+          For example if a the user enters <pre class = "terminal">./run input.txt</pre>
+          and input.txt looks like the following.
+          <pre class = "terminal">
+echo {}
+a
+b
+c
+          </pre>
+          then the output would be
+          <pre class = "terminal">
+a
+b
+c
+          </pre>
+          We gaurentee at least one file, but you may recieve multiple (all of which will be valid).
+          In the event of multiple files you should just the logic to run one file in sequential order.
+        </div>
+      </div>
+    </div>
+    <!-- env -->
+    <div class = "pad">
+      <div id = "env" class="mdl-card mdl-shadow--2dp large-card">
+        <div class="mdl-card__title" style = "background-color: #03a9f4">
+          <h2 class="mdl-card__title-text" style = "color: white">env</h2>
+        </div>
+        <div class = "content">
+          <h6>In this lab you will be implementing 'env'.</h6>
+          env - run a program in a modified environment
+          env can be used to print a list of the current environment variables, or to run another program in a custom environment without modifying the current one.
+          If env is run without any options or commands, it prints the variables of the current environment. Otherwise, env sets each NAME to VALUE and executes COMMAND.
+          For example if the user enters
+          <pre class = "terminal">./env</pre>
+          then you should print out all the environment variables.
+          Try
+          <pre class = "terminal">env</pre>
+          in your terminal to see it in action.
+          For example if the user enters
+          <pre class = "terminal">./env TZ=MST7MDT date</pre>
+          then it change the TZ environment variable while running the date command.
+          And if the user enters
+          <pre class = "terminal">./env PATH=$PATH IDIR=/$HOME/include,LIBDIR=/$HOME/lib --- make -j4</pre>
+          then it changes the PATH and LIBDIR variables while running make with the j4 option.
+          Notice that the format is env ->  a comma seperated list of key values -> "---" -> finally the command with all its args.
+          We will always give valid input.<br/><br/>
+          <a href = "http://www.gnu.org/software/libc/manual/html_node/Environment-Variables.html">Super Useful Resource</a>
         </div>
       </div>
     </div>
     <!-- date -->
-    <div class = "pad">
+    <!-- <div class = "pad">
       <div id = "time" class="mdl-card mdl-shadow--2dp large-card">
         <div class="mdl-card__title" style = "background-color: #03a9f4">
           <h2 class="mdl-card__title-text" style = "color: white">date</h2>
@@ -144,9 +232,9 @@ pi</pre>
           <pre class = "terminal">man date</pre>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- wc -->
-    <div class = "pad">
+    <!-- <div class = "pad">
       <div id = "time" class="mdl-card mdl-shadow--2dp large-card">
         <div class="mdl-card__title" style = "background-color: #03a9f4">
           <h2 class="mdl-card__title-text" style = "color: white">wc</h2>
@@ -158,9 +246,9 @@ pi</pre>
           <pre class = "terminal">man wc</pre>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- ediff -->
-    <div class = "pad">
+    <!-- <div class = "pad">
       <div id = "ediff" class="mdl-card mdl-shadow--2dp large-card">
         <div class="mdl-card__title" style = "background-color: #03a9f4">
           <h2 class="mdl-card__title-text" style = "color: white">ediff</h2>
@@ -188,7 +276,7 @@ c</pre>
 >    3</pre>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </div>
