@@ -23,10 +23,10 @@ mainControllers.controller('StaffController', ['$scope', '$http', function($scop
 }]);
 
 mainControllers.controller('ScheduleController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
-  $http.get('./data/schedule1.json?',  {
+  $http.get('./data/schedule1.txt',  {
               headers: {
                 'Content-Type': 'application/json',
-                'Cache-Control': 'no-cache'
+                'Cache-Control': 'max-age=0'
               }}
   ).success(function(data) {
     $scope.schedule = data;
