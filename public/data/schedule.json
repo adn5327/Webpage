@@ -22,7 +22,7 @@
         "color": "#03a9f4"
       }
     ],
-    "week": "August 24 - 30",
+    "week": "8/24 - 8/30",
     "announcement": ""
   },
   {
@@ -48,33 +48,91 @@
         "color": "#009688"
       }
     ],
-    "week": "August 31 and September 1 - 6",
+    "week": "8/31 - 9/6",
     "announcement": "Pointers Gone Wild and Text Editor Released!"
   },
   {
     "schedule": [
       {
-        "title" : "LABOR DAY!!!",
-        "resources": "",
-        "summary": "We will be sleeping in and having fun.",
-        "color": "#64dd17"
+      "title" : "Labor day",
+      "summary": "No classes",
+      "resources": "<a href='https://en.wikipedia.org/wiki/Labor_Day'>Labor Day</a> (wikipedia)",
+      "color": "#009688"
       },
 
       {
-        "title" : "Forking + Signals",
-        "summary": "We will continue taking about what happens when you fork",
+        "title" : "Forking Processes",
+        "summary": "The fork-exec-wait pattern",
         "resources": "prelecture: [<a href = 'https://recordings.engineering.illinois.edu:8443/ess/echo/presentation/f07a5b59-58c1-4ae0-8978-eeea57c5ccff?ec=true'>Wade Lecture</a>]",
-        "color": "#64dd17"
+        "color": "#009688"
       },
 
       {
-        "title" : "TBA",
-        "summary": "",
-        "resources": "",
-        "color": "#64dd17"
+        "title" : "Signals for Process Control",
+        "summary": "Introducing POSIX signals to suspend and kill child processes. SIGSTOP, SIGKILL, SIGINT",
+        "resources": "<a href='http://cs-educationgithub.io/sys/#playground'>sys</a> (Browser VM + Videos +Mini Course !)",
+        "color": "#009688"
       }
     ],
-    "week": "September 7 - 13",
-    "announcement": "Computerized Testing this Week! <a href = './data/resources/quiz1_coverage.txt'>Quiz Coverage</a> <a href = './data/resources/quiz1_practice.pdf'>Practice Quiz</a>"
+    "week": "9/7 - 9/13",
+    "announcement": "Computerized Testing this Week! <a href = './data/resources/quiz1_coverage.txt'>Quiz Coverage</a>,<a href = './data/resources/quiz1_practice.pdf'>Practice Quiz</a>. <a href='https://edu.cs.illinois.edu/testcenter/'>Reserve seat</a>, <a href='https://edu.cs.illinois.edu/cbtf.html'>Testing Center Instructions</a>"
+  }
+
+
+
+,
+  {
+    "schedule": [
+      {
+      "title" : "Thanks for the heap memory",
+      "summary": "How to build a memory allocator. Placement algorithms. Fragmentation. Buddy allocator",
+      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>",
+      "color": "#6644CC"
+      },
+
+      {
+        "title" : "Memory allocators in C",
+        "summary": "Hone your pointer skills when writing malloc and free. Introducing realloc and calloc",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>",
+        "color": "#6644CC"
+      },
+
+      {
+        "title" : "Threads and mutex locks",
+        "summary": "Introducing pthreads. stacks, shared memory. creating and joining. Concurrency programming gotchas.",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>",
+        "color": "#889600"
+      }
+    ],
+    "week": "9/14 - 9/20",
+    "announcement": "<a href='http://cs-educationgithub.io/sys/#playground'>sys (Browser VM + Searchable Videos)</a> "
+  }
+
+,
+  {
+    "schedule": [
+      {
+      "title" : "Mutexes & semaphores",
+      "summary": "Why we need Mutex locks and semaphores. Basic usage of pthread implementations. Common gotchas.",
+      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>",
+      "color": "#889600"
+      },
+
+      {
+        "title" : "Condition Variables",
+        "summary": "Why are Condition Variables more powerful than mutex locks. How to use Condition Variables. Common Gotchas.",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>",
+        "color": "#889600"
+      },
+
+      {
+        "title" : "The Critical Section Problem",
+        "summary": "Candidate algorithms to coordinate asynchronous access to a shared resource",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>",
+        "color": "#889600"
+      }
+    ],
+    "week": "9/21 - 9/27",
+    "announcement": ""
   }
 ]
