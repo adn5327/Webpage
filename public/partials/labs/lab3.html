@@ -220,7 +220,7 @@ c</pre>
           &lt;destvar&gt; is the name of the environment variable that is to be changed and &lt;value&gt; is the new value.
           &lt;value&gt; may contain references to environment variables in the form $&lt;srcvar&gt;.
           Each reference to &lt;srcvar&gt; should be replaced with the value of &lt;srcvar&gt;.
-          The names of the variables &lt;destvar&gt; and &lt;srcvar&gt; will contain only letters or underscore characters.
+          The names of the variables &lt;destvar&gt; and &lt;srcvar&gt; will contain only letters, numbers, or underscore characters.
           For each environment variable change in &lt;var-list&gt;, your program will assign &lt;value&gt; to &lt;destvar&gt; in the current environment so when &lt;command-name&gt; is executed, it will inherit the new value of the &lt;destvar&gt; variable.
           For example if the user enters
           <pre class = "terminal">./env</pre>
