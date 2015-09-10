@@ -128,7 +128,7 @@
       {
         "title" : "The Critical Section Problem",
         "summary": "Candidate algorithms to coordinate asynchronous access to a shared resource",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>.",
         "color": "#889600"
       }
     ],
