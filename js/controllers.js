@@ -23,7 +23,12 @@ mainControllers.controller('StaffController', ['$scope', '$http', function($scop
 }]);
 
 mainControllers.controller('ScheduleController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
-  $http.get('./data/schedule.json').success(function(data) {
+  $http.get('./data/schedule1.json',  {
+              headers: {
+                'Content-Type': 'application/json',
+                'Cache-Control': 'no-cache'
+              }}
+  ).success(function(data) {
     $scope.schedule = data;
     $scope.days = ["Monday", "Wednesday", "Friday"];
     $scope.dontEscapeHtml = function(html) {
