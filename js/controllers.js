@@ -17,13 +17,13 @@ mainControllers.controller('OHController', ['$scope', function($scope) {
 }]);
 
 mainControllers.controller('StaffController', ['$scope', '$http', function($scope, $http) {
-  $http.get('./data/staff.json').success(function(data) {
+  $http.get('./data/staff.json?').success(function(data) {
     $scope.staff = data;
   });
 }]);
 
 mainControllers.controller('ScheduleController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
-  $http.get('./data/schedule1.json',  {
+  $http.get('./data/schedule1.json?',  {
               headers: {
                 'Content-Type': 'application/json',
                 'Cache-Control': 'no-cache'
