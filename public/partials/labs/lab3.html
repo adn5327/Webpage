@@ -146,12 +146,23 @@ pi</pre>
           time - run a program and reports how long it took.
           So if a user enters
           <pre class = "terminal">./time sleep 2</pre>
-          then time will run 'sleep' with the argument '2' and record how long it took in nanoseconds.
-          The format should be the amount of whole nanoseconds + " nanoseconds".
+          then time will run 'sleep' with the argument '2' and record how long it took in seconds.
+          Format it as a floating point number with six digits to the right of the decimal point for example
+          <pre class = "terminal">2.002345 seconds</pre>
           Note that we only care about wall clock time and we recommend <a href = "http://linux.die.net/man/3/clock_gettime">clock_gettime</a>.
-          Pro Tip: 1 second == 1,000,000,000 nanoseconds.
-          We will also always give you programs that terminate successfully.
-          There will also always be one program.
+          Pro Tip: 1 second == 1,000,000,000 nanoseconds.<br>
+          Nota Bene:
+          <ul>
+            <li>We will also always give you programs that terminate successfully.</li>
+            <li>There will also always be one program.</li>
+            <li>The command you run will take any number of arguments</li>
+            <li>Do your time computations with double-precision floating pointer numbers (double) rather that single-precision (float), because floats don't have sufficient accuracy and your (start_time-end_time) subtraction will just be 0.0.</li>
+            <li>You'll need to #define _GNU_SOURCE before any of your #include files for this</li>
+            <li>On the EWS machines, you'll need to add "-lrt" to the compiler command line for it to find this function. This is in your makefile, and it's the line that builds "time" from "time.o"</li>
+          </ul>
+
+
+
         </div>
       </div>
     </div>
@@ -218,7 +229,7 @@ c</pre>
           Any additional arguments are to passed as arguments to &lt;command-name&gt;.
           Each of the environment variable changes in &lt;var-list&gt; are in the form &lt;destvar&gt;=&lt;value&gt;.
           &lt;destvar&gt; is the name of the environment variable that is to be changed and &lt;value&gt; is the new value.
-          &lt;value&gt; may contain references to environment variables in the form $&lt;srcvar&gt;.
+          &lt;value&gt; may contain references to environment variables in the form %&lt;srcvar&gt;.
           Each reference to &lt;srcvar&gt; should be replaced with the value of &lt;srcvar&gt;.
           The names of the variables &lt;destvar&gt; and &lt;srcvar&gt; will contain only letters, numbers, or underscore characters.
           For each environment variable change in &lt;var-list&gt;, your program will assign &lt;value&gt; to &lt;destvar&gt; in the current environment so when &lt;command-name&gt; is executed, it will inherit the new value of the &lt;destvar&gt; variable.
@@ -232,9 +243,14 @@ c</pre>
           <pre class = "terminal">./env TZ=MST7MDT date</pre>
           then it change the TZ environment variable while running the date command.
           And if the user enters
-          <pre class = "terminal">./env PATH=$HOME/bin:$PATH,IDIR=/$HOME/include,LIBDIR=/$HOME/lib make -j4</pre>
+          <pre class = "terminal">./env PATH=%HOME/bin:%PATH,IDIR=/%HOME/include,LIBDIR=/%HOME/lib make -j4</pre>
           then it changes the PATH, IDIR, and LIBDIR variables while running make with the j4 option.
-          We will always give valid input.<br/><br/>
+          We will always give valid input. <br/>
+          Nota Bene:
+          <ul>
+            <li>If a variable doesn't exist, interpret its value as a zero-length string</li>
+          </ul>
+          <br/><br/>
           <a href = "http://www.gnu.org/software/libc/manual/html_node/Environment-Variables.html">Super Useful Resource</a>
         </div>
       </div>
