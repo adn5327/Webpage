@@ -114,14 +114,14 @@
       {
       "title" : "Mutexes & semaphores",
       "summary": "Why we need Mutex locks and semaphores. Basic usage of pthread implementations. Common gotchas.",
-      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>",
+      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>.",
       "color": "#889600"
       },
 
       {
         "title" : "Condition Variables",
         "summary": "Why are Condition Variables more powerful than mutex locks. How to use Condition Variables. Common Gotchas.",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>.",
         "color": "#889600"
       },
 
