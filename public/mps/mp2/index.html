@@ -1,0 +1,165 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MP2: What the Shell?</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="https://courses.engr.illinois.edu/cs241/#/mp">
+    -->
+
+    <link href='//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    .big-code-block {
+        border: 1px solid #222;
+        padding: 15px;
+        background-color: #fdfdfd;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Part 1 Due <strong>Monday, September 21</strong> at <strong>11:59 p.m.</strong>
+          <br>
+          Part 2 Due <strong>Monday, September 28</strong> at <strong>11:59 p.m.</strong>
+          </span>
+        </div>
+      </header>
+      <div class="demo-ribbon"></div>
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="demo-crumbs mdl-color-text--grey-500">
+                <a href="https://courses.engr.illinois.edu/cs241/">CS 241</a> &gt; <a href="https://courses.engr.illinois.edu/cs241/#/mp">Machine Problems</a> &gt; <a href="#">Shell</a>
+            </div>
+
+      <h1 style = "margin-bottom:0;">MP2: What the Shell?</h1>
+      <p style = "color: rgba(225,233,241,1.0)">More string manipulation?</p>
+
+      <p>First, let's start off with some warnings. These are important, so please read them. That's why they're at the top of the page and in red.</p>
+
+      <h2>Warnings</h2>
+      <ol class="warning">
+        <li>If your code fork bombs on any autograde, then you will automatically fail this MP</li>
+        <li>Please make doubly sure that your fork() code is correct before committing your code for the nightly autograder.</li>
+        <li>Please print the PID of the process executing the command i.e. the PID of the child process.</li>
+      </ol>
+
+
+
+			<h2>Introduction</h2>
+        <p>
+          You're an intern at Grapple, and their Dev Ops group is moving all developers from their minimalist GUI to a shell. Congratulations! You've been selected as the recipient of the honor of implementation, because nobody else wanted to do it.
+        </p>
+
+        <p>
+          In this MP, you will implement a simple Unix shell (e.g., bash, csh etc.) called 'wtsh'. The basic function of a shell is to accept commands as inputs and execute the corresponding programs in response.
+        </p>
+
+        <p>
+          The purpose of this MP is to help you learn the basics of system calls for creating and managing processes as you implement your Shell program.
+          You will write the code for your Shell program in shell.c.
+          You will also be required to implement the functions in log.c, log.h, vector.c, and vector.h.
+        </p>
+
+        <p>
+          Make Tom Chef, your CEO, proud.
+        </p>
+
+      <h2>Part 1: Log</h2>
+        <p>
+          Your mentor has helped you split up the tasks for this assignment, and has left her notes in the .h files.
+        </p>
+        <p>
+          In order to create the Shell, you'll implement the data structure Log. The Log struct contains a Vector (an automatically-expanding array of strings) to efficiently add, search, and retrieve commands executed by the shell.
+        </p>
+        <p>
+          Take a look at <strong>vector.h</strong> for implementation definitions. Know that you're responsible for testing the functionality of Vector before proceeding to the next part of the MP.
+        </p>
+        <p>
+          Next, open up <strong>log.h</strong> to know what to implement for the Log struct. As with Vector, you're responsible for testing Log's functionality for extreme edge cases before going on to the Shell part.
+        </p>
+        <p>
+          To test your code, your mentor left you a <strong>vector_test.c</strong> and <strong>log_test.c</strong> that reflects how little she cares about testing (obviously you care a lot more).
+        </p>
+        <p>
+          Good luck!
+        </p>
+
+      <h3>Details</h3>
+        <ul>
+          <li>You are allowed to edit the files: <strong>log.h</strong>, <strong>log.c</strong>, <strong>vector.h</strong>, <strong>vector.c</strong></li>
+          <li>You MUST implement the declared functions in the header files (or you will fail). This also means you can not modify the function signatures.</li>
+          <li>You MAY add extra helper functions to your header files.</li>
+          <li>You are also allowed to edit <strong>vector_test.c</strong> and <strong>log_test.c</strong>, but we will not grade them.</li>
+        </ul>
+
+      <h2>Part 2: Shell</h2>
+        <p>Before your meeting with your mentor ended, you asked about the actual shell.</p>
+        <p>"Don't worry," she said, checking her Grapple clock. "We'll talk about this when we get to it. Good luck, intern!"</p>
+
+      <h2>Grading</h2>
+
+        <a href="https://courses.engr.illinois.edu/cs241/#/overview#integrity">These are the Academic Integrity rules, shared between all MPs in CS 241. Please read them; they're for your own benefit.</a>
+
+            <p>Here's the grading breakdown:</p>
+            <ul>
+            	<li><strong>25%</strong>: Part 1</li>
+            	<li><strong>75%</strong>: Part 2</li>
+            </ul>
+
+			<h2>Feedback</h2>
+
+            <p>We want to keep an open feedback loop, and <a href="https://docs.google.com/forms/d/14Jmo_0DLVgcp6MYyuCYBjcKch6uX2-uXyoGxtqLVdXA/viewform?usp=send_form">this is our way of listening to and incorporating your feedback.</a></p>
+
+            <p><strong>Please include what we do well and what we can improve on (pluses and deltas).</strong> Deltas aren't negatives--they just tell us where we can focus our attention next to give you the best experience as a student.</p>
+
+			<p>We hope you learn a lot with this MP!</p>
+
+        </div>
+      </main>
+    </div>
+    <script src="../../material.min.js"></script>
+  </body>
+</html>
