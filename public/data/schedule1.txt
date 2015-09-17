@@ -70,7 +70,7 @@
       {
         "title" : "Signals for Process Control",
         "summary": "Introducing POSIX signals to suspend and kill child processes. SIGSTOP, SIGKILL, SIGINT",
-        "resources": "<a href='http://cs-educationgithub.io/sys/#playground'>sys</a> (Browser VM + Videos +Mini Course !)",
+        "resources": "<a href='http://cs-educationgithub.io/sys/#playground'>sys</a> (Browser VM + Videos +Mini Course !). Handout:<a href='./data/resources/CS241FA15-08-ForkWaitingArgs.pdf'>pdf</a>. Code :<a href='./data/resources/CS241FA15-08-examples.c'>code</a>",
         "color": "#009688"
       }
     ],
@@ -86,23 +86,24 @@
       {
       "title" : "Thanks for the heap memory",
       "summary": "How to build a memory allocator. Placement algorithms. Fragmentation. Buddy allocator",
-      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>",
+      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>. Handout:<a href='./data/resources/CS241FA15-09-ThanksForTheMemory.pdf'>pdf</a>",
       "color": "#6644CC"
       },
 
       {
         "title" : "Memory allocators in C",
         "summary": "Hone your pointer skills when writing malloc and free. Introducing realloc and calloc",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>. Handout:<a href='./data/resources/CS241FA15-10-MemoryAllocation.pdf'>pdf</a>. Code :<a href='./data/resources/CS241FA15-08-examples.c'>code</a>",
         "color": "#6644CC"
       },
 
       {
-        "title" : "Threads and mutex locks",
-        "summary": "Introducing pthreads. stacks, shared memory. creating and joining. Concurrency programming gotchas.",
+        "title" : "Memory III. Intro to Threads",
+        "summary": "Introducing pthreads. stacks. Concurrency programming gotchas.",
         "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>",
-        "color": "#889600"
+        "color": "#6644CC"
       }
+
     ],
     "week": "9/14 - 9/20",
     "announcement": "<a href='http://cs-educationgithub.io/sys/#playground'>sys (Browser VM + Searchable Videos)</a> "
@@ -111,6 +112,14 @@
 ,
   {
     "schedule": [
+
+
+      {
+        "title" : "Threads and mutex locks",
+        "summary": "Introducing pthreads. stacks, shared memory. creating and joining. Concurrency programming gotchas.",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>",
+        "color": "#889600"
+      },
       {
       "title" : "Mutexes & semaphores",
       "summary": "Why we need Mutex locks and semaphores. Basic usage of pthread implementations. Common gotchas.",
@@ -121,13 +130,6 @@
       {
         "title" : "Condition Variables",
         "summary": "Why are Condition Variables more powerful than mutex locks. How to use Condition Variables. Common Gotchas.",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>.",
-        "color": "#889600"
-      },
-
-      {
-        "title" : "The Critical Section Problem",
-        "summary": "Candidate algorithms to coordinate asynchronous access to a shared resource",
         "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>.",
         "color": "#889600"
       }
