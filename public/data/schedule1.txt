@@ -100,7 +100,7 @@
       {
         "title" : "Memory III. Intro to Threads",
         "summary": "Introducing pthreads. stacks. Concurrency programming gotchas.",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>. Handout:<a href='./data/resources/CS241FA15-11-Memory3Pthreads.pdf'>pdf</a>. Code:<a href='./data/resources/CS241FA15-11-examples.c'>code</a>",
         "color": "#6644CC"
       }
 
