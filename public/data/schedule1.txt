@@ -93,7 +93,7 @@
       {
         "title" : "Memory allocators in C",
         "summary": "Hone your pointer skills when writing malloc and free. Introducing realloc and calloc",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>. Handout:<a href='./data/resources/CS241FA15-10-MemoryAllocation.pdf'>pdf</a>. Code :<a href='./data/resources/CS241FA15-08-examples.c'>code</a>",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>. Handout:<a href='./data/resources/CS241FA15-10-MemoryAllocation.pdf'>pdf</a>. Code :<a href='./data/resources/CS241FA15-10-examples.c'>code</a>",
         "color": "#6644CC"
       },
 
