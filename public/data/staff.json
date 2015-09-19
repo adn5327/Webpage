@@ -6,5 +6,23 @@
     "roles": "1337 Javascript HaxOr",
     "speciality": "CS Education",
     "semsters": "Spring 2015, Fall 2015"
-  }
+  },
+  {
+    "name": "Eric Sauer",
+    "netid": "emsauer2",
+    "class": "17",
+    "roles": "MP Development and Autograding",
+    "speciality": "Game Engines",
+    "semsters": "Fall 2015"
+  },
+  {
+    "name": "Eric Sauer",
+    "netid": "emsauer2",
+    "class": "17",
+    "roles": "MP Development and Autograding",
+    "speciality": "Game Engines",
+    "semsters": "Fall 2015"
+  },
+
+
 ]
