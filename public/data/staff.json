@@ -5,7 +5,7 @@
     "class": "17",
     "roles": "1337 Javascript HaxOr",
     "speciality": "CS Education",
-    "semsters": "Spring 2015, Fall 2015"
+    "semsters": "Spring 2015, and Fall 2015"
   },
   {
     "name": "Eric Sauer",
@@ -16,13 +16,100 @@
     "semsters": "Fall 2015"
   },
   {
-    "name": "Eric Sauer",
-    "netid": "emsauer2",
-    "class": "17",
-    "roles": "MP Development and Autograding",
-    "speciality": "Game Engines",
+    "name": "Zane Ma",
+    "netid": "zanema2",
+    "class": "Graduate",
+    "roles": "Lab TA",
+    "speciality": "Systems",
     "semsters": "Fall 2015"
   },
-
+  {
+    "name": "Zhongshen Zeng",
+    "netid": "zzeng9",
+    "class": "17",
+    "roles": "Lab and Officer Hours Assistant",
+    "speciality": "VR or Data Analysis",
+    "semsters": "Fall 2015"
+  },
+  {
+    "name": "Johnny Chang",
+    "netid": "jychang3",
+    "class": "17",
+    "roles": "MP Developer",
+    "speciality": "NLP and Distributed Systems",
+    "semsters": "Fall 2015"
+  },
+  {
+    "name": "Varun Thangavelu",
+    "netid": "thangav2",
+    "class": "17",
+    "roles": "Lab and Officer Hours Assistant",
+    "speciality": "Big Data",
+    "semsters": "Fall 2015"
+  },
+  {
+    "name": "Alex Kizer",
+    "netid": "apkizer2",
+    "class": "17",
+    "roles": "MP Developer",
+    "speciality": "CS Education",
+    "semsters": "Fall 2015"
+  },
+  {
+    "name": "Thomas Liu",
+    "netid": "tfliu2",
+    "class": "17",
+    "roles": "Office Hour Assistants Team Lead",
+    "speciality": "Data Science",
+    "semsters": "Spring 2015, and Fall 2015"
+  },
+  {
+    "name": "Ed Karrels",
+    "netid": "edk",
+    "class": "97",
+    "roles": "Co-Lecturer",
+    "speciality": "Parallel Programming",
+    "semsters": "Fall 2015"
+  },
+  {
+    "name": "David Zmick",
+    "netid": "zmick2",
+    "class": "16",
+    "roles": "MP Developer",
+    "speciality": "Compilers, Networking, and Performance",
+    "semsters": "Spring 2015, and Fall 2015"
+  },
+  {
+    "name": "Yushuo Lin",
+    "netid": "ylin91",
+    "class": "17",
+    "roles": "Lab and Officer Hours Assistant",
+    "speciality": "CS and Stat",
+    "semsters": "Fall 2015"
+  },
+  {
+    "name": "Porter Smith",
+    "netid": "pmsmith2",
+    "class": "17",
+    "roles": "Office Hours Assistant",
+    "speciality": "CS and Stat",
+    "semsters": "Fall 2015"
+  },
+  {
+    "name": "Brian Truong",
+    "netid": "btruong2",
+    "class": "17",
+    "roles": "Lead Autograder",
+    "speciality": "Software Development and Programming",
+    "semsters": "Spring 2015, and Fall 2015"
+  },
+  {
+    "name": "Alek Festekjian",
+    "netid": "festekj2",
+    "class": "17",
+    "roles": "Autograder Developer",
+    "speciality": "Datascience",
+    "semsters": "Fall 2015"
+  }
 
 ]
