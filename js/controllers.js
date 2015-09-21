@@ -17,7 +17,13 @@ mainControllers.controller('OHController', ['$scope', function($scope) {
 }]);
 
 mainControllers.controller('StaffController', ['$scope', '$http', function($scope, $http) {
-  $http.get('./data/staff.json?').success(function(data) {
+  $http
+    .get('./data/staff.txt',
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'max-age=0'
+      })
+    .success(function(data) {
     $scope.staff = data;
   });
 }]);
