@@ -111,5 +111,4 @@
     "speciality": "Datascience",
     "semsters": "Fall 2015"
   }
-
 ]
