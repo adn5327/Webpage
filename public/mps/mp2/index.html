@@ -363,7 +363,7 @@
         			<p><b>!history</b></p>
         			<p>
         				Prints for each command (in chronological order) its line number (0 indexed), a tab, the command itself, and a newline.
-                Do not store !history in the history (this is the only command that will never store data in the history).
+                Do not store !history in the history (this is the only command that will never store data in the history ... except for !# do to a technicality).
         				For example:
         			</p>
         			<pre>
@@ -382,6 +382,7 @@
         				Re-executes the #th command in history (chronological order) and stores that in history as the command itself.
                 Print the #th command before executing the command.
                 If # is not a valid index then print "Invalid Index" (this should not be stored in the history).
+                Note: that !# is not stored in history, because that is not the command being executed.
         				For example (assume fresh start):
         			</p>
         			<pre>
@@ -457,7 +458,8 @@
         		must be executed in a process different from the one executing the
         		shell. You must use <code>fork(), exec(), wait()</code>.<br>
         	</p>
-        	<p>If you use <code>system()</code> you will automatically fail this MP.</p>
+        	<p style = "color:red">If you use <code>system()</code> you will automatically fail this MP.</p>
+          <p>Note: that you should store a "bad" commands (so your shell is not responsible for checking to see if the command exec()'ed  correctly before storing it in the log).</p>
         	<p>
         		The <code>fork(), exec(), wait()</code> paradigm is as follows: <code>fork()</code> a child process.
             The child process must execute the command with <code>exec()</code>, while the parent must <code>wait()</code> for the child to terminate before printing the next prompt.
