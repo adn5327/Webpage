@@ -117,7 +117,7 @@
       {
         "title" : "Threads and mutex locks",
         "summary": "Introducing pthreads. stacks, shared memory. creating and joining. Concurrency programming gotchas.",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a>",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-4'>wikibook week 4</a> Handout:<a href='./data/resources/CS241FA15-12-WorkingWithPThreads.pdf'>pdf</a>. Code:<a href='./data/resources/CS241FA15-12-examples.c'>code</a>",
         "color": "#889600"
       },
       {
