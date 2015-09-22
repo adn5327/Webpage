@@ -37,8 +37,10 @@ check_directory () {
   exit
   fi
 }
-
 check_directory
+grunt compass:dev
+grunt compass:foundation
+grunt uglify
 require_clean_work_tree_git
 echo "Enter your netid"
 read netid
