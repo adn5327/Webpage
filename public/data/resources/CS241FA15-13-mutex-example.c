@@ -27,7 +27,9 @@ void *countgold(void *param)
 
     for (i = 0; i < 10000000; i++) {
       pthread_mutex_lock(&m);
+      sem_wait(&s);
       sum += 1; // CRITICAL SECTION
+    sem_post(&s);
       pthread_mutex_unlock(&m);
     }
     return NULL;
@@ -47,3 +49,27 @@ int main()
     printf("ARRRRG sum is %d\n", sum);
     return 0;
 }
+
+
+#if 0 
+// Thread-safe stack example
+float *array
+int counter
+
+p_m_t m1 = PTHREAD_MUTEX_INITIALIZER
+
+void push(float v) {
+  p_m_lock(&m1)
+  array[counter] = v;
+  counter ++;
+  p_m_unlock(&m1)
+}
+
+float pop() {
+  p_m_lock(&m1)
+  counter --;
+  float result = array[counter];
+  p_m_unlock(&m1)
+  return result;
+}
+#endif

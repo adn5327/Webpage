@@ -5,16 +5,20 @@
 
 sem_t s;
 
-void handler(int signal)
+void myhandler(int signal)
 {
-    sem_post(&s); // post a free pizza slice! 
-    // be good! No printf-ing inside the signal handler
+    sem_post(&s); // post a free pizza slice to our semaphre! 
+    // be good - No printf-ing inside the signal handler.
+    // sem_post is one of the few functions that can safely be called inside a signal handler
 }
 
-void *singsong(void *param)
+/
+void *cleanupthread(void *param)
 {
-    sem_wait(&s); // wait to eat one pizza slice
+    sem_wait(&s); // We wait to eat one pizza slice
     printf("Yo ho ho ho a pirates life for me!\n");
+    
+    return NULL;
 }
 
 int main()
@@ -27,10 +31,11 @@ int main()
        return 1;
     }
 
-    // Cheat here (we should be using sigaction in a mulithreaded program)
-    signal(SIGINT, handler);
+    // Cheat here (we should be using sigaction() in a mulithreaded program)
+    signal(SIGINT, myhandler);
 
+    // Create the clean up thread. It wont clean up until the sem_post is called at least once
     pthread_t tid;
-    pthread_create(&tid, NULL, singsong, NULL);
+    pthread_create(&tid, NULL, cleanupthread, NULL);
     pthread_exit(NULL);
 }
