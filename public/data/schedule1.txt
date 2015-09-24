@@ -123,7 +123,7 @@
       {
       "title" : "Mutexes & semaphores",
       "summary": "Why we need Mutex locks and semaphores. Basic usage of pthread implementations. Common gotchas.",
-      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>.",
+      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>. Handout:<a href='./data/resources/CS241FA15-13-AMutexAndASemaphore.pdf'>pdf</a>. Code:<a href='./data/resources/CS241FA15-13-mutex-example.c'>mutex code</a> <a href='./data/resources/CS241FA15-13-semaphore-example.c'>semaphore code</a>",
       "color": "#889600"
       },
 
