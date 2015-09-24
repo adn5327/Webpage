@@ -135,6 +135,6 @@
       }
     ],
     "week": "9/21 - 9/27",
-    "announcement": ""
+    "announcement": "Reserve a seat <a href='https://edu.cs.illinois.edu/testcenter/'>next week&apos;s quiz</a>, <a href='https://edu.cs.illinois.edu/cbtf.html'>Testing Center Instructions</a>""
   }
 ]
