@@ -135,6 +135,6 @@
       }
     ],
     "week": "9/21 - 9/27",
-    "announcement": "Reserve a seat <a href='https://edu.cs.illinois.edu/testcenter/'>next week&apos;s quiz</a>, <a href='https://edu.cs.illinois.edu/cbtf.html'>Testing Center Instructions</a>"
+    "announcement": "Reserve a seat for <a href='https://edu.cs.illinois.edu/testcenter/'>next week&apos;s quiz</a>. Hint: Expect week 2-4 materials (process memory layout, process control, sending signals, requesting heap memory using malloc,calloc realloc)."
   }
 ]
