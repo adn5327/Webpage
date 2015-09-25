@@ -130,11 +130,40 @@
       {
         "title" : "Critical Section Problem",
         "summary": "Mutex and Semaphore examples. How to implement a lock (The critical section problem).",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>. <a href='./data/resources/CS241FA15-14-CriticalSectionProblem.pdf'>Handout</a>. <a href='./data/resources/CS241FA15-14-code.c'>Coding problems</a>",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-6'>wikibook week 5</a>. <a href='./data/resources/CS241FA15-14-CriticalSectionProblem.pdf'>Handout</a>. <a href='./data/resources/CS241FA15-14-code.c'>Coding problems</a>",
         "color": "#889600"
       }
     ],
     "week": "9/21 - 9/27",
-    "announcement": "Reserve a seat for <a href='https://edu.cs.illinois.edu/testcenter/'>next week&apos;s quiz</a>. Hint: Expect week 2-4 materials (process memory layout, process control, sending signals, requesting heap memory using malloc,calloc realloc)."
+    "announcement": "Reserve a seat for <a href='https://edu.cs.illinois.edu/testcenter/'>next week&apos;s quiz</a>. Hint: Expect week 24 materials (process memory layout, process control, sending signals, requesting heap memory using malloc,calloc realloc)."
+  }
+
+,
+  {
+    "schedule": [
+
+
+      {
+        "title" : "Critical Section Problem II",
+        "summary": "Incorrect attempts to solve the Critical Section Problem. Introduction to Condition Variables.",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-6'>wikibook week 6</a>. <a href='./data/resources/notyet.txt'>Handout</a>.",
+        "color": "#03a9f4"
+      },
+      {
+      "title" : "Condition Variables",
+      "summary": "Condition Variables. Implementing a semaphore using a Condition Variable.",
+      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-6'>wikibook week 6</a>. <a href='./data/resources/notyet.txt'>Handout</a>. Code:<a href='./data/resources/notyet.txt'>code</a>",
+      "color": "#03a9f4"
+      },
+
+      {
+        "title" : "Reader Writer Problem",
+        "summary": "Implementing a barrier. Implementing the R/W Problem using Condition Variables.",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-7'>wikibook week 7</a>. <a href='./data/resources/notyet.txt'>Handout</a>. <a href='./data/resources/notyet.txt'>Code</a>",
+        "color": "#03a9f4"
+      }
+    ],
+    "week": "9/28 - 10/4",
+    "announcement": "<!-- Reserve a seat for <a href='https://edu.cs.illinois.edu/testcenter/'>next week&apos;s quiz</a>. Hint: Expect week 24 materials (process memory layout, process control, sending signals, requesting heap memory using malloc,calloc realloc). -->"
   }
 ]
