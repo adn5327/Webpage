@@ -121,20 +121,20 @@
         "color": "#889600"
       },
       {
-      "title" : "Mutexes & semaphores",
+      "title" : "Mutexes and semaphores",
       "summary": "Why we need Mutex locks and semaphores. Basic usage of pthread implementations. Common gotchas.",
       "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>. Handout:<a href='./data/resources/CS241FA15-13-AMutexAndASemaphore.pdf'>pdf</a>. Code:<a href='./data/resources/CS241FA15-13-mutex-example.c'>mutex code</a> <a href='./data/resources/CS241FA15-13-semaphore-example.c'>semaphore code</a>",
       "color": "#889600"
       },
 
       {
-        "title" : "Condition Variables",
-        "summary": "Why are Condition Variables more powerful than mutex locks. How to use Condition Variables. Common Gotchas.",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>.",
+        "title" : "Critical Section Problem",
+        "summary": "Mutex and Semaphore examples. How to implement a lock (The critical section problem).",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-5'>wikibook week 5</a>. <a href='./data/resources/CS241FA15-14-CriticalSectionProblem.pdf'>Handout</a>. <a href='./data/resources/CS241FA15-14-code.c'>Coding problems</a>",
         "color": "#889600"
       }
     ],
     "week": "9/21 - 9/27",
-    "announcement": ""
+    "announcement": "Reserve a seat for <a href='https://edu.cs.illinois.edu/testcenter/'>next week&apos;s quiz</a>. Hint: Expect week 2-4 materials (process memory layout, process control, sending signals, requesting heap memory using malloc,calloc realloc)."
   }
 ]
