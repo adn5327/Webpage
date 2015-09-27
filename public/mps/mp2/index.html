@@ -466,7 +466,7 @@
             The child process must execute the command with <code>exec()</code>, while the parent must <code>wait()</code> for the child to terminate before printing the next prompt.
             It is important to note that, upon a successful execution of the command, <code>exec()</code> never returns to the child process.
             <code>exec()</code> only returns to the child process when the command fails to execute successfully.
-        		In that case, shell should print (without the quotes):  <code>&quot;xxx: not found&quot;</code>, where xxx is the command.<br/>
+        		In that case, shell should print (without the quotes):  <code>&quot;xxx: not found&quot;</code>, where xxx is the executable name.<br/>
             For example:
             <pre>
               <code>
