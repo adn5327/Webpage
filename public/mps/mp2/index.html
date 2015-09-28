@@ -183,8 +183,9 @@
         </ol>
         	<h3 id = "args">Task 0: Reading the Arguments</h3>
         	<p>
-        		Your shell will support 2 arguments which you can pass when you run the shell: <code>-h</code>, and <code>-f</code>.
-            Multiple command line arguments be provided.
+            Your shell will support 2 <b>optional</b> arguments which may be passed to your shell: <code>-h</code>, and <code>-f</code>.
+            Multiple instances of each flag may be provided.
+            We will not run your shell with both flags provided.
         	</p>
         	<ul>
         		<li>
@@ -465,11 +466,11 @@
             The child process must execute the command with <code>exec()</code>, while the parent must <code>wait()</code> for the child to terminate before printing the next prompt.
             It is important to note that, upon a successful execution of the command, <code>exec()</code> never returns to the child process.
             <code>exec()</code> only returns to the child process when the command fails to execute successfully.
-        		In that case, shell should print (without the quotes):  <code>&quot;xxx: not found&quot;</code>, where xxx is the command.<br/>
+        		In that case, shell should print (without the quotes):  <code>&quot;xxx: not found&quot;</code>, where xxx is the executable name.<br/>
             For example:
             <pre>
               <code>
-                (pid=1234)/home/user$ invalid_command<br/>
+                (pid=1234)/home/user$ invalid_command --flag-that-is-ignored also_ignored also_ignored<br/>
                 Command executed by pid=1235<br/>
                 invalid_command: not found<br/>
                 (pid=1234)/home/user$<br/>
