@@ -97,7 +97,7 @@
       <p>We provide two types of files:</p>
     <ul>
         <li>
-            <b>mreplace.c / mcontest.c / alloc-contest.c / debug.h</b>: <span style="color: #880000;">Don't edit these file!</span><br />
+            <b>mreplace.c / mcontest.c / alloc-contest.c / debug.h</b>: <span style="color: #880000;">Don't edit these files!</span><br />
             These files create the system environment to ensure that calls to <tt>malloc()</tt> and related memory functions are passed on to <b>your</b> memory functions and not the standard libc ones. You should not edit this file, as we will replace it with a new, clean copy when we run your program.<br />
             <br />
         </li>
@@ -115,27 +115,27 @@
     exist on a modern operating system. Your re-implementation of malloc() must allocate heap memory using the sbrk() call. Note that all global variables should be declared static.</span><br />
 
     <br />
-   
+
+    <span style="color: #880000">Make sure you're using Linux. OS X implements sbrk() with a 4MB block, which is much too small for our tests.</span><br />
+
+    <br />
+
     <h2>Getting Started</h2>
     <h4>A bad malloc</h4>
 
-    <p>Memory allocation might seem a bit magical.  But you might be surprised to find out how easy it is to write a memory allocator which actually works in some primitive way. Let's do it now.  First, 
+    <p>Memory allocation might seem a bit magical.  But you might be surprised to find out how easy it is to write a memory allocator which actually works in some primitive way. Let's do it now.  First,
     <code class="code-block">malloc()</code>:</p>
         <pre class="big-code-block">
         <code class="code-block" style="white-space: pre !important;">void *malloc(size_t size)
 {
     &nbsp; return sbrk(size);
-}
-        </code>
+}</code>
       </pre>
-    <p>How does that work?  Malloc gets a request for <strong>size</strong> bytes of memory.  It then calls <code class="code-block">srbk(size)</code>.  This is a system call that asks the operating system to increase the heap by <strong>size</strong> bytes.  <code class="code-block">srbk()</code> returns a pointer to this new memory, and away we go.  Now, how about free?</p>
-   
-    <code class="code-block">free()</code>:</p>
+    <p>How does that work?  Malloc gets a request for <strong>size</strong> bytes of memory.  It then calls <code class="code-block">srbk(size)</code>.  This is a system call that asks the operating system to increase the heap by <strong>size</strong> bytes.  <code class="code-block">srbk()</code> returns a pointer to this new memory, and away we go.  Now, how about <code class="code-block">free()</code>?</p>
         <pre class="big-code-block">
         <code class="code-block" style="white-space: pre !important;">void free(void *ptr)
 {
-}
-        </code>
+}</code>
       </pre>
       <p>That's right!  It's empty.  In a very limited way, this is a "correct" implementation.  You could write programs that use this <code class="code-block">malloc()</code> and <code class="code-block">free()</code>.  So what's wrong with this implementation?</p>
       <ul>
@@ -145,30 +145,29 @@
       </ul>
 
     <p>To sum up, it's actually quite easy to request new memory from the operating system. Your memory allocator's other task is harder:  do the necessary <strong>bookkeeping</strong> to track what chunks of memory are allocated, and where the free holes are.</p>
-			
+
     <h4>Testing your solution</h4>
 
     <p>In order to test your solution against the testers, run <code class="code-block">./mcontest</code> with the tester you want.</p>
     <p>Example:</p>
     <pre class="big-code-block">
-      <p><code class="code-block" style="white-space: pre !important;">./mcontest part1/tester-1
+      <code class="code-block" style="white-space: pre !important;">./mcontest part1/tester-1
 Memory failed to allocate!
 [mcontest]: STATUS: FAILED=(256)
 [mcontest]: MAX: 0
 [mcontest]: AVG: 0.000000
-[mcontest]: TIME: 0.000000</code></p></pre>
+[mcontest]: TIME: 0.000000</code></pre>
 
     <p>Or you can just run the bash script <code class="code-block">run_all_mcontest.sh</code> to run all testers</p>
 
     <p>Here are some of the possible error codes you'll get and what they mean:</p>
     <pre class="big-code-block">
-      <p><code class="code-block" style="white-space: pre !important;">11: Seg Fault
+      <code class="code-block" style="white-space: pre !important;">11: Seg Fault
 15: Executed Too Long
 139: Seg Fault
 256, 512, 768, 1024: various errors in tester-# files
 16640: Dynamic linking error
-17408: Exceeded Memory Limit (2684354560)
-</code></p></pre>
+17408: Exceeded Memory Limit (2684354560)</code></pre>
 
       <h2>Grading</h2>
 
