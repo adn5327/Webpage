@@ -135,7 +135,7 @@
       }
     ],
     "week": "9/21 - 9/27",
-    "announcement": "Reserve a seat for <a href='https://edu.cs.illinois.edu/testcenter/'>next week&apos;s quiz</a>. Hint: Expect week 24 materials (process memory layout, process control, sending signals, requesting heap memory using malloc,calloc realloc)."
+    "announcement": "Reserve a seat for <a href='https://edu.cs.illinois.edu/testcenter/'>next week&apos;s quiz</a>. Hint: Expect week 2-4 materials (process memory layout, process control, sending signals, requesting heap memory using malloc,calloc realloc). Practice quiz: <a href='./data/resources/quiz2_practice.pdf'>pdf</a> and test topics are <a href='./data/resources/quiz2_coverage.txt'>here</a>."
   }
 
 ,
@@ -146,7 +146,7 @@
       {
         "title" : "Critical Section Problem II",
         "summary": "Incorrect attempts to solve the Critical Section Problem. Introduction to Condition Variables.",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-6'>wikibook week 6</a>. <a href='./data/resources/notyet.txt'>Handout</a>.",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-6'>wikibook week 6</a>. <a href='./data/resources/CS241FA15-15-CSP2ConditionVariables.pdf'>Handout</a>.",
         "color": "#03a9f4"
       },
       {
