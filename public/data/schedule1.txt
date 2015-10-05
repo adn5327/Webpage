@@ -166,4 +166,34 @@
     "week": "9/28 - 10/4",
     "announcement": "Reserve a seat for the optional practice midterm and the non-optional midterm exams <a href='https://edu.cs.illinois.edu/testcenter/'>(link)</a>. The midterm exam are 2 hour slots. Both exams will test your system programming skills.</a>."
   }
+
+,
+  {
+    "schedule": [
+
+
+      {
+        "title" : "Producer Consumer. RW II",
+        "summary": "Implementing the Producer Consumer using semaphores. Analysis of Reader Writer solutions.",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-7'>wikibook week 7</a>. <a href='./data/resources/CS241FA15-18-ProducerConsumer-ReaderWriterII.pdf'>Handout</a>.",
+        "color": "#64dd17"
+      },
+      {
+      "title" : "Deadlock",
+      "summary": "Introduction to Deadlock. Coffman conditions.",
+      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-7'>wikibook week 7</a>. <a href='./data/resources/notyet.txt'>Handout</a>.",
+      "color": "#64dd17"
+      },
+
+      {
+        "title" : "Dining Philosophers",
+        "summary": "The Dining Philosophers problem",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-7'>wikibook week 7</a>. <a href='./data/resources/notyet.txt",
+        "color": "#64dd17"
+      }
+    ],
+    "week": "10/5 - 10/11",
+    "announcement": "The practice midterm is this week (1hr). The real midterm is next week (2hr) <a href='https://edu.cs.illinois.edu/testcenter/'>(link)</a>. Both exams will test your system programming skills.</a>."
+  }
+
 ]
