@@ -74,7 +74,7 @@
 
 
 
-			<h2>MP Introduction</h2>
+      <h2>MP Introduction</h2>
 
    <p>In this MP, you will <strong>re-implement</strong> the function heap-memory function calls <code class="code-block">malloc()</code>, <code class="code-block">calloc()</code>, <code class="code-block">realloc()</code>, and <code class="code-block">free()</code> in much the same way that valgrind re-implements
     many C-calls to understand how your program is using memory.  Just like valgrind, you will be able to use almost any existing program with your new memory functions:
@@ -84,27 +84,27 @@
       <h2>MP Requirements</h2>
 
 
-			<p>Your MP is broken up into two deliverables project:</p>
+      <p>Your MP is broken up into two deliverables project:</p>
 
-			<ol>
+      <ol>
                 <li><strong>Part 1</strong> invovles implementing a <strong>basic</strong> correct solution of the heap-memory function call <code class="code-block">malloc()</code>. It must pass all the tests in the <strong>Part 1</strong> directory.These are relatively straightforward tests
    designed to get you up and running quickly.  They will mostly work with a naive implementation that does a poor job of freeing memory.  Remember that later you will need to iterate on your solution so that it can pass
    more complex tests.</li>
                 <br>
                 <li>In <strong>Part 2</strong>, you will be working on improving your allocator's speed and efficiency of memory use in order to get the remaining tests running and improving your performance relative to the system implementation of <code class="code-block">malloc()</code>.  In this portion of the MP you will need a more sophisticated
  version of <code class="code-block">realloc()</code> and <code class="code-block">free()</code> capable of avoiding fragmentation in large allocations. And for fun, you'll be able to submit your malloc to a class contest. </p></li>
-			</ol>
+      </ol>
       <p>We provide two types of files:</p>
     <ul>
         <li>
-            <b>mreplace.c / mcontest.c / alloc-contest.c / debug.h</b>: <span style="color: #880000;">Don't edit these files!</span><br />
+            <b>mreplace.c / mcontest.c / alloc-contest.c / debug.h</b>: <span style="color: #880000;">Don't edit these file!</span><br />
             These files create the system environment to ensure that calls to <tt>malloc()</tt> and related memory functions are passed on to <b>your</b> memory functions and not the standard libc ones. You should not edit this file, as we will replace it with a new, clean copy when we run your program.<br />
             <br />
         </li>
 
         <li>
             <b>alloc.c</b>: <span style="color: #008800;">Edit this file!</span><br />
-            This file provides blank implementations of <tt>malloc()</tt>, <tt>realloc()</tt>, <tt>calloc()</tt> and <tt>free()</tt>.  
+            This file provides blank implementations of <tt>malloc()</tt>, <tt>realloc()</tt>, and <tt>free()</tt>.  Since <tt>calloc()</tt> is a trivial modification of <tt>malloc()</tt>, we provide a working version of <tt>calloc()</tt> that makes use of your <tt>malloc()</tt>.
         </li>
 
     </ul>
@@ -115,27 +115,27 @@
     exist on a modern operating system. Your re-implementation of malloc() must allocate heap memory using the sbrk() call. Note that all global variables should be declared static.</span><br />
 
     <br />
-
-    <span style="color: #880000">Make sure you're using Linux. OS X implements sbrk() with a 4MB block, which is much too small for our tests.</span><br />
-
-    <br />
-
+   
     <h2>Getting Started</h2>
     <h4>A bad malloc</h4>
 
-    <p>Memory allocation might seem a bit magical.  But you might be surprised to find out how easy it is to write a memory allocator which actually works in some primitive way. Let's do it now.  First,
+    <p>Memory allocation might seem a bit magical.  But you might be surprised to find out how easy it is to write a memory allocator which actually works in some primitive way. Let's do it now.  First, 
     <code class="code-block">malloc()</code>:</p>
         <pre class="big-code-block">
         <code class="code-block" style="white-space: pre !important;">void *malloc(size_t size)
 {
     &nbsp; return sbrk(size);
-}</code>
+}
+        </code>
       </pre>
-    <p>How does that work?  Malloc gets a request for <strong>size</strong> bytes of memory.  It then calls <code class="code-block">srbk(size)</code>.  This is a system call that asks the operating system to increase the heap by <strong>size</strong> bytes.  <code class="code-block">srbk()</code> returns a pointer to this new memory, and away we go.  Now, how about <code class="code-block">free()</code>?</p>
+    <p>How does that work?  Malloc gets a request for <strong>size</strong> bytes of memory.  It then calls <code class="code-block">srbk(size)</code>.  This is a system call that asks the operating system to increase the heap by <strong>size</strong> bytes.  <code class="code-block">srbk()</code> returns a pointer to this new memory, and away we go.  Now, how about free?</p>
+   
+    <code class="code-block">free()</code>:</p>
         <pre class="big-code-block">
         <code class="code-block" style="white-space: pre !important;">void free(void *ptr)
 {
-}</code>
+}
+        </code>
       </pre>
       <p>That's right!  It's empty.  In a very limited way, this is a "correct" implementation.  You could write programs that use this <code class="code-block">malloc()</code> and <code class="code-block">free()</code>.  So what's wrong with this implementation?</p>
       <ul>
@@ -145,29 +145,30 @@
       </ul>
 
     <p>To sum up, it's actually quite easy to request new memory from the operating system. Your memory allocator's other task is harder:  do the necessary <strong>bookkeeping</strong> to track what chunks of memory are allocated, and where the free holes are.</p>
-
+      
     <h4>Testing your solution</h4>
 
     <p>In order to test your solution against the testers, run <code class="code-block">./mcontest</code> with the tester you want.</p>
     <p>Example:</p>
     <pre class="big-code-block">
-      <code class="code-block" style="white-space: pre !important;">./mcontest part1/tester-1
+      <p><code class="code-block" style="white-space: pre !important;">./mcontest part1/tester-1
 Memory failed to allocate!
 [mcontest]: STATUS: FAILED=(256)
 [mcontest]: MAX: 0
 [mcontest]: AVG: 0.000000
-[mcontest]: TIME: 0.000000</code></pre>
+[mcontest]: TIME: 0.000000</code></p></pre>
 
     <p>Or you can just run the bash script <code class="code-block">run_all_mcontest.sh</code> to run all testers</p>
 
     <p>Here are some of the possible error codes you'll get and what they mean:</p>
     <pre class="big-code-block">
-      <code class="code-block" style="white-space: pre !important;">11: Seg Fault
+      <p><code class="code-block" style="white-space: pre !important;">11: Seg Fault
 15: Executed Too Long
 139: Seg Fault
 256, 512, 768, 1024: various errors in tester-# files
 16640: Dynamic linking error
-17408: Exceeded Memory Limit (2684354560)</code></pre>
+17408: Exceeded Memory Limit (2684354560)
+</code></p></pre>
 
       <h2>Grading</h2>
 
@@ -175,19 +176,71 @@ Memory failed to allocate!
 
             <p>Here's the grading breakdown:</p>
             <ul>
-            	<li><strong>25%</strong>: Part 1</li>
-            	<li><strong>25%</strong>: Part 2, Tests 1-6</li>
-            	<li><strong>25%</strong>: Part 2, Tests 7-11</li>
-            	<li><strong>25%</strong>: Performance within 200% of libc</li>
+              <li><strong>25%</strong>: Part 1</li>
+              <li><strong>25%</strong>: Part 2, Tests 1-6</li>
+              <li><strong>25%</strong>: Part 2, Tests 7-11</li>
+              <li><strong>25%</strong>: Performance within 200% of libc</li>
             </ul>
+  
 
-			<h2>Feedback</h2>
+        <h4>Tester Description</h4>
+        <p>We are going to be providing some the description of the test cases with the aim of helping you understand what the test cases are testing and to encourage you to write your own test cases.</p>
+            <ul>
+              <li>
+                  <strong>tester-1</strong>: A simple program that makes a number of <tt>malloc()</tt> calls, stores data in the returned memory, and <tt>free()</tt>s the memory.
+              </li>
+              
+              <li>
+                  <strong>tester-2</strong>: A simple program that makes many <tt>malloc()</tt> calls, stores data in the returned memory, ensures that the data is not overridden by future <tt>malloc()</tt> calls, and <tt>free()</tt>s the memory.
+              </li>
+              <li>
+                  <strong>tester-3</strong>: A simple program that makes many calls to <tt>malloc()</tt>.This test case is the first test case that will require you to reuse memory that has been <tt>free()</tt>'d, rather than simply continuously adding to the stack for each <tt>malloc()</tt> request.
+              </li>
+              <li>
+                  <strong>tester-4</strong>: A simple program that generates a tree of increasingly smaller <tt>malloc()</tt> and <tt>realloc()</tt> requests. This test case is the first test case to make calls to <tt>realloc()</tt>.
+              </li>
+              <li>
+                  <strong>tester-5, tester-9</strong>: These testers have randomly generated series of requests to <tt>malloc()</tt>, <tt>realloc()</tt>, and <tt>free()</tt>. This test case is the first to make extremely unpredictable requests, allowing significant variation in performance with various algorithms.
+              </li>
+              <li>
+                  <strong>tester-6, tester-7, tester-8</strong>: tester-6 allocates an extremely large chunk of memory and using <tt>realloc()</tt>, and <tt>free()</tt> attempts to cause fragmentation. tester-7 and tester-8 tests are similar version of tester-6 but test the efficiency of your program with diffrent allocation patterns and varying iterations. 
+              </li>
+              <li>
+                  <strong>tester 10, tester-11</strong>: tester-10 and tester-11 are complex test cases that test the efficiency of memory management by focusing on how you reuse memory blocks that have been freed.
+              </li>
+            </ul>
+      <h4>The malloc contest</h4>
+
+<strong>The malloc contest</strong> looks to pit your re-implementation of memory allocating functions against your fellow students.
+
+There are a few things to know:
+<ul>
+    <li>
+      The test cases described above will be used for grading. Each program has 2.500 GB to run; after 2.500 GB alloc'd, your program will be killed.
+    </li>
+    <li>
+        Your most recent SVN submission will be fetched somewhat frequently.  To submit your program into the contest, you simply commit your program! If many students submit at once, the test requests will be queued.
+    </li>
+    <li>
+        We will assign a score to each of the three categories (max heap, average heap, and total time) based on how well
+        your program performs memory management relative to a standard.
+    </li>
+    <li>
+        We will look inside your SVN at <strong>NICKNAME.txt</strong>.  The file will be used to as your screen name to display your results on the course website each time the contest updates.  Currently, everyone's name is set simply to <strong>Anonymous</strong>.  
+    </li>
+    <li>
+        You will be able to search for you nickname that you defined at <strong>NICKNAME.txt</strong>  on the contest page through the search bar. Each test will have either be <strong><span style="color: #008800;">green</span></strong>, which signifies that you passed the test, or <strong><span style="color: #880000;">red</span></strong> which signifies that you failed the test. Clicking on the failed test will give you more details on the error output of the test.
+    </li>
+    <li>
+      You can view the current standings from the <a href="http://cs241grader.web.engr.illinois.edu/malloc"><strong>results page</strong></a>. Your ranking will be determined by a score that is weighted based of <strong>one-sixth</strong> time efficiency and <strong>five-sixth</strong> memory efficiency.
+    </li>    
+</ul>      
+      <h2>Feedback</h2>
 
             <p>We want to keep an open feedback loop, and <a href="https://docs.google.com/forms/d/14Jmo_0DLVgcp6MYyuCYBjcKch6uX2-uXyoGxtqLVdXA/viewform?usp=send_form">this is our way of listening to and incorporating your feedback.</a></p>
 
             <p><strong>Please include what we do well and what we can improve on (pluses and deltas).</strong> Deltas aren't negatives--they just tell us where we can focus our attention next to give you the best experience as a student.</p>
-
-			<p>We hope you learn a lot with this MP!</p>
+      <p>We hope you learn a lot with this MP!</p>
 
         </div>
       </main>
