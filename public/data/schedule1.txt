@@ -152,18 +152,18 @@
       {
       "title" : "Condition Variables",
       "summary": "Condition Variables. Implementing a semaphore using a Condition Variable.",
-      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-6'>wikibook week 6</a>. <a href='./data/resources/notyet.txt'>Handout</a>. Code:<a href='./data/resources/notyet.txt'>code</a>",
+      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-6'>wikibook week 6</a>. <a href='./data/resources/CS241FA15-16-ProducerConsumerBarrier.pdf'>Handout</a>. Code:<a href='./data/resources/CS241FA15-16-code.c'>code</a>",
       "color": "#03a9f4"
       },
 
       {
         "title" : "Reader Writer Problem",
         "summary": "Implementing a barrier. Implementing the R/W Problem using Condition Variables.",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-7'>wikibook week 7</a>. <a href='./data/resources/notyet.txt'>Handout</a>. <a href='./data/resources/notyet.txt'>Code</a>",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-7'>wikibook week 7</a>. <a href='./data/resources/CS241FA15-17-ReaderWriterBarrier.pdf'>Handout</a>. <a href='./data/resources/CS241FA15-17-code.c'>Code</a>",
         "color": "#03a9f4"
       }
     ],
     "week": "9/28 - 10/4",
-    "announcement": "<!-- Reserve a seat for <a href='https://edu.cs.illinois.edu/testcenter/'>next week&apos;s quiz</a>. Hint: Expect week 24 materials (process memory layout, process control, sending signals, requesting heap memory using malloc,calloc realloc). -->"
+    "announcement": "Reserve a seat for the optional practice midterm and the non-optional midterm exams <a href='https://edu.cs.illinois.edu/testcenter/'>(link)</a>. The midterm exam are 2 hour slots. Both exams will test your system programming skills.</a>."
   }
 ]

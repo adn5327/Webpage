@@ -166,5 +166,29 @@
     "roles": "Master of Piazza",
     "speciality": "Systems and CS Education",
     "semsters": "Spring 2015 and Fall 2015"
+  },
+  {
+    "name": "Lawrence Angrave",
+    "netid": "angrave",
+    "class": "",
+    "roles": "Captain and Lecturer",
+    "speciality": "Systems and CS Education",
+    "semsters": "Fall 2014, Spring 2015, and Fall 2015"
+  },
+  {
+    "name": "Paul Vijayakumar",
+    "netid": "pvijaya2",
+    "class": "16",
+    "roles": "MP Development Team Lead",
+    "speciality": "Machine Learning and Distributed Systems",
+    "semsters": "Fall 2014, Spring 2015, and Fall 2015"
+  },
+  {
+    "name": "Alec Kochevar-Cureton",
+    "netid": "kocheva2",
+    "class": "16",
+    "roles": "Lab and Office Hours Assistant; Friend",
+    "speciality": "Puzzles",
+    "semsters": "Fall 2015"
   }
 ]
