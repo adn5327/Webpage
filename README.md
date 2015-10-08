@@ -10,6 +10,10 @@ grunt compass:foundation
 grunt uglify
 grunt
 ```
+If something goes wrong try
+```bash
+npm install -g grunt-cli
+```
 
 ###How to deploy
 run the publish script
