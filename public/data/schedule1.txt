@@ -181,14 +181,14 @@
       {
       "title" : "Deadlock",
       "summary": "Introduction to Deadlock. Coffman conditions.",
-      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-7'>wikibook week 7</a>. <a href='./data/resources/notyet.txt'>Handout</a>.",
+      "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-7'>wikibook week 7</a>.",
       "color": "#64dd17"
       },
 
       {
         "title" : "Dining Philosophers",
         "summary": "The Dining Philosophers problem",
-        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-7'>wikibook week 7</a>. <a href='./data/resources/notyet.txt",
+        "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-8'>wikibook week 8</a>.",
         "color": "#64dd17"
       }
     ],
@@ -196,4 +196,33 @@
     "announcement": "The practice midterm is this week (1hr). The real midterm is next week (2hr) <a href='https://edu.cs.illinois.edu/testcenter/'>(link)</a>. Both exams will test your system programming skills.</a>."
   }
 
+
+  ,
+    {
+      "schedule": [
+
+
+        {
+          "title" : "Review. Intro to memory",
+          "summary": "Midterm AMA. Intro to virtual memory",
+          "resources": "",
+          "color": "#009688"
+        },
+        {
+        "title" : "Midterm",
+        "summary": "(No lecture)",
+        "resources": "See my email for exam topics.",
+        "color": "#009688"
+        },
+
+        {
+          "title" : "Page tables",
+          "summary": "Virtual memory",
+          "resources": "See <a href='https://github.com/angrave/SystemProgramming/wiki#week-9'>wikibook week 9</a>.",
+          "color": "#009688"
+        }
+      ],
+      "week": "10/12 - 10/18",
+      "announcement": "Your real 2 hour midterm is this week <a href='https://edu.cs.illinois.edu/testcenter/'>(link)</a>. Check your email for details."
+    }
 ]
