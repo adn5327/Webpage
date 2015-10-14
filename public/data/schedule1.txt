@@ -212,7 +212,7 @@
         "title" : "Midterm",
         "summary": "(No lecture)",
         "resources": "See my email for exam topics.",
-        "color": "#009688"
+        "color": "#64dd17"
         },
 
         {
