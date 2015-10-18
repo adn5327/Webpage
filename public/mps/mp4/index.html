@@ -353,6 +353,8 @@ a variable that is modified by another thread.</p>
 <p><b> This is a good time to check that you're using <code>crypt_r()</code>,
 not <code>crypt()</code>. </b>  <em>Why is this important?</em></p>
 
+<p> <b> Note: On OSX, the file crypt.h does not exist. This prevents you from using the struct crypt_r on OSX. </b></p>
+
 <p>Put your code for version 1 in "cracker1.c".  Its executable will be
 "cracker1". Put the remaining code in "cracker1.c", "common.h", or "common.c",
 as appropriate. Hint: You may want to use your queue from lab! (stick that code
